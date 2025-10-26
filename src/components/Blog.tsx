@@ -34,7 +34,7 @@ const blogPosts: BlogPost[] = [
     date: "September 22, 2025",
     readTime: "5 min read",
     category: "Instagram",
-    image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop&q=80",
     platforms: ["instagram"]
   },
   {
@@ -55,7 +55,7 @@ const blogPosts: BlogPost[] = [
     date: "October 3, 2025",
     readTime: "4 min read",
     category: "TikTok",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=800&auto=format&fit=crop&q=80",
     platforms: ["tiktok", "instagram"]
   },
   {
@@ -75,7 +75,7 @@ const blogPosts: BlogPost[] = [
     date: "August 29, 2025",
     readTime: "6 min read",
     category: "LinkedIn",
-    image: "https://images.unsplash.com/photo-1515165562835-c3b8c1ea36cb?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop&q=80",
     platforms: ["linkedin"]
   },
   {
@@ -96,7 +96,7 @@ const blogPosts: BlogPost[] = [
     date: "July 18, 2025",
     readTime: "7 min read",
     category: "UGC",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&auto=format&fit=crop&q=80",
     platforms: ["instagram", "tiktok", "youtube"]
   },
   {
@@ -117,7 +117,7 @@ const blogPosts: BlogPost[] = [
     date: "June 7, 2025",
     readTime: "5 min read",
     category: "Workflow",
-    image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&auto=format&fit=crop&q=80",
     platforms: ["instagram", "tiktok", "linkedin"]
   },
   {
@@ -137,7 +137,7 @@ const blogPosts: BlogPost[] = [
     date: "May 24, 2025",
     readTime: "6 min read",
     category: "Analytics",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
     platforms: ["instagram", "tiktok", "linkedin", "facebook", "twitter"]
   }
 ];

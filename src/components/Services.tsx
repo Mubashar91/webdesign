@@ -1,30 +1,42 @@
-import { Instagram, HeadphonesIcon, FolderKanban, TrendingUp } from "lucide-react";
+import { Lightbulb, Video, MessageCircle, BarChart3, Target, Users, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 
 const services = [
   {
-    icon: Instagram,
-    title: "Content & Creatives",
-    description: "High-quality posts, carousels, reels and stories tailored to your brand voice",
+    icon: Lightbulb,
+    title: "Strategy & Planning",
+    description: "Content pillars, competitor analysis, platform selection, and 90-day growth roadmaps tailored to your business goals",
+    benefit: "Clear direction from day 1"
+  },
+  {
+    icon: Video,
+    title: "Content Creation",
+    description: "Reels, carousels, graphics, captions, and video editing—all designed to stop the scroll and drive engagement",
     benefit: "3–5x engagement lift"
   },
   {
-    icon: HeadphonesIcon,
+    icon: MessageCircle,
     title: "Community Management",
-    description: "Daily moderation, comment replies, DMs and proactive audience engagement",
-    benefit: "+30% response rate"
+    description: "Daily comment replies, DM handling, proactive engagement, and building loyal fans who advocate for your brand",
+    benefit: "+40% response rate"
   },
   {
-    icon: FolderKanban,
-    title: "Publishing & Scheduling",
-    description: "Cross-platform scheduling, calendar planning and asset workflows",
-    benefit: "Saved 20+ hrs/month"
+    icon: BarChart3,
+    title: "Analytics & Reporting",
+    description: "Monthly performance reports, A/B testing insights, and data-driven recommendations to optimize your strategy",
+    benefit: "Track what matters"
   },
   {
-    icon: TrendingUp,
-    title: "Paid Social & Analytics",
-    description: "Ad setup, A/B testing and performance reporting with actionable insights",
+    icon: Target,
+    title: "Paid Social Advertising",
+    description: "Campaign setup, audience targeting, ad creative, and budget optimization across Meta, TikTok, and LinkedIn Ads",
     benefit: "2–4x ROAS potential"
+  },
+  {
+    icon: Users,
+    title: "Influencer Partnerships",
+    description: "Identify, negotiate, and manage creator collaborations to amplify your reach and build authentic social proof",
+    benefit: "Expand your audience"
   }
 ];
 
@@ -56,11 +68,11 @@ export const Services = () => {
             What We <span className="text-gold">Handle</span> For You
           </h2>
           <p className="text-base sm:text-lg md:text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed px-2">
-            From customer support to content creation — we've got the talent you need to scale.
+            End-to-end social media management — from strategy to execution, we handle it all so you can focus on your business.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 sm:gap-6 md:gap-7 lg:gap-8 max-w-6xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-7 lg:gap-8 max-w-7xl mx-auto relative z-10">
           {services.map((service, index) => (
             <motion.div 
               key={index}
