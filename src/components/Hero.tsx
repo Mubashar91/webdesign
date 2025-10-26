@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Calendar, Sparkles, TrendingUp, Users, Star, Award } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
 
 export const Hero = () => {
   const ref = useRef(null);
@@ -156,8 +155,8 @@ export const Hero = () => {
             >
               {/* Layer 1: image */}
               <motion.img
-                src={heroImage}
-                alt="Social media content creation and analytics dashboard"
+                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2074&auto=format&fit=crop"
+                alt="Social media marketing workspace with laptop and mobile devices"
                 className="w-full h-auto object-cover"
                 style={{ transform: "translateZ(20px)" }}
               />
