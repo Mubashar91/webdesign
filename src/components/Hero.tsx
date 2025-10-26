@@ -155,8 +155,8 @@ export const Hero = () => {
             >
               {/* Layer 1: image */}
               <motion.img
-                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2074&auto=format&fit=crop"
-                alt="Social media marketing workspace with laptop and mobile devices"
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+                alt="Social media analytics dashboard with charts and metrics"
                 className="w-full h-auto object-cover"
                 style={{ transform: "translateZ(20px)" }}
               />
