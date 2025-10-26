@@ -9,28 +9,28 @@ import { HelpCircle, Shield, Zap } from "lucide-react";
 
 const faqs = [
   {
-    question: "How quickly can I get started?",
-    answer: "Most clients are onboarded within 48-72 hours. After our intro call, we match you with the perfect VA and begin the transition process immediately."
+    question: "Which platforms do you manage?",
+    answer: "We specialize in Instagram, TikTok, LinkedIn, Facebook, X (Twitter), and YouTube. We tailor strategies per platform—reels for IG, short-form for TikTok, carousels for LinkedIn, etc."
   },
   {
-    question: "What if I'm not satisfied with my VA?",
-    answer: "We offer a 14-day money-back guarantee on all plans. Plus, our 24h replacement guarantee means if any issues arise, we'll provide a new VA within 24 hours at no extra cost."
+    question: "Do you create all the content or do I need to provide it?",
+    answer: "We handle everything: scripting, design, video editing, captions, and scheduling. You approve the content calendar and final posts—we do the heavy lifting."
   },
   {
-    question: "How does the native German quality control work?",
-    answer: "All work is reviewed by native German-speaking managers before delivery. This ensures cultural nuances, language quality, and business standards meet German expectations."
+    question: "How often will you post on my accounts?",
+    answer: "Typically 3–5 posts per week per platform, depending on your plan. We prioritize quality over quantity and adjust cadence based on what performs best for your audience."
   },
   {
-    question: "Can I scale up or down?",
-    answer: "Absolutely. You can upgrade, downgrade, or pause your plan with 30 days notice. We're built for flexibility as your business evolves."
+    question: "What if I don't like the content you create?",
+    answer: "You review and approve everything before it goes live. We offer unlimited revisions during the approval window and refine our approach based on your feedback each week."
   },
   {
-    question: "What tools do your VAs use?",
-    answer: "Our VAs are proficient in all major platforms: Slack, Trello, Asana, Google Workspace, Microsoft Office, Canva, HubSpot, Salesforce, and more. We adapt to your existing workflow."
+    question: "How do you measure success?",
+    answer: "We track reach, engagement rate, follower growth, saves, shares, and link clicks. Monthly reports tie metrics to your business goals—whether that's leads, sales, or brand awareness."
   },
   {
-    question: "Is my data secure?",
-    answer: "Yes. All VAs sign comprehensive NDAs before starting. We follow GDPR compliance, use encrypted communication channels, and can work within your existing security protocols."
+    question: "Can I scale to more platforms or reduce services?",
+    answer: "Yes. You can add or remove platforms, adjust posting frequency, or pause with 30 days notice. We're built for flexibility as your needs evolve."
   }
 ];
 
@@ -77,7 +77,7 @@ export const FAQ = () => {
             </h2>
             {/* Description - Centered */}
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed px-2 text-center mx-auto">
-              Everything you need to know about working with DON VA. Can't find what you're looking for? Chat with us.
+              Everything you need to know about our social media management. Can't find what you're looking for? Chat with us.
             </p>
           </motion.div>
 
@@ -132,10 +132,10 @@ export const FAQ = () => {
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-bold text-foreground mb-1.5">
-                    Quality Control
+                    Content Approval
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Native German management ensures every deliverable meets your standards
+                    You review and approve all content before it goes live—unlimited revisions included
                   </p>
                 </div>
               </div>
@@ -148,10 +148,10 @@ export const FAQ = () => {
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-bold text-foreground mb-1.5">
-                    50+ Tools Supported
+                    Full-Stack Social
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Trello • Slack • Google Workspace • Canva • Asana • HubSpot & more
+                    Instagram • TikTok • LinkedIn • Canva • CapCut • Analytics & more
                   </p>
                 </div>
               </div>

@@ -1,34 +1,35 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Calendar, UserCheck, Rocket, LineChart } from "lucide-react";
 
 const steps = [
   {
     icon: Calendar,
     step: "Step 1",
-    title: "Book Your Free Consultation",
-    description: "Share your needs, challenges, and goals in a 15-minute call. No sales pressure, just honest advice on how we can help you scale."
+    title: "Strategy Call",
+    description: "We align on goals, audience, platforms and voice. Clear content pillars and KPIs for growth."
   },
   {
     icon: UserCheck,
     step: "Step 2",
-    title: "Get Matched with Your Perfect VA",
-    description: "Within 48-72 hours, we'll match you with a pre-vetted VA who has the exact skills you need. Review their profile, experience, and work samples."
+    title: "Creatives & Copy",
+    description: "We produce posts, carousels, reels and captions tailored to your brand. You approve, we refine."
   },
   {
     icon: Rocket,
     step: "Step 3",
-    title: "Onboard & Start Working",
-    description: "We handle the entire onboarding process. Your VA learns your tools, processes, and brand voice. Most clients are fully operational within a week."
+    title: "Publishing & Community",
+    description: "Scheduling across channels, daily comments/DMs, and proactive engagement to build loyalty."
   },
   {
     icon: LineChart,
     step: "Step 4",
-    title: "Scale & Optimize",
-    description: "Track progress with regular reports. Scale up or down as needed. Our native German quality control ensures consistent excellence."
+    title: "Analytics & Optimization",
+    description: "Monthly reporting, experiments and paid boosts to scale what works and cut what doesn’t."
   }
 ];
 
 export const HowItWorks = () => {
+  const prefersReducedMotion = useReducedMotion();
   return (
     <motion.section 
       id="how-it-works"
@@ -36,7 +37,7 @@ export const HowItWorks = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.05 }}
-      transition={{ duration: 1.2, ease: [0.6, -0.05, 0.01, 0.99] }}
+      transition={{ duration: prefersReducedMotion ? 0.5 : 1.0, ease: [0.6, -0.05, 0.01, 0.99] }}
     >
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div 
@@ -47,7 +48,7 @@ export const HowItWorks = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <span className="inline-block px-4 py-2 bg-foreground text-gold text-sm font-semibold rounded-full mb-4">
-            Simple 4-Step Process
+            SMM in 4 Steps
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
             How It <span className="text-gold">Works</span>
@@ -62,35 +63,37 @@ export const HowItWorks = () => {
             <motion.div 
               key={index}
               className="relative mb-12 sm:mb-16 last:mb-0"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50, rotateY: 0 }}
+              initial={{ opacity: 0, x: prefersReducedMotion ? 0 : (index % 2 === 0 ? -16 : 16), rotateY: 0 }}
               whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
               viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.8, delay: index * 0.2, ease: [0.6, -0.05, 0.01, 0.99] }}
+              transition={{ duration: prefersReducedMotion ? 0.45 : 0.7, delay: index * 0.15, ease: [0.6, -0.05, 0.01, 0.99] }}
             >
               <div className={`flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-10 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                 <motion.div 
-                  className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-gold via-yellow-400 to-gold flex items-center justify-center shadow-[0_20px_60px_-15px_hsl(45_80%_55%/0.6)] relative group"
-                  whileHover={{ scale: 1.1, rotate: 360 }}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-gold via-[hsl(var(--brand-blue))] to-gold flex items-center justify-center text-white ring-1 ring-brand/30 shadow-[0_12px_30px_-12px_hsl(var(--brand-blue)/0.45)] relative group"
+                  whileHover={prefersReducedMotion ? { scale: 1.02 } : { scale: 1.06, rotate: 6 }}
+                  transition={{ duration: 0.45, ease: "easeInOut" }}
                 >
-                  <div className="absolute inset-0 rounded-full bg-gold/20 blur-xl group-hover:blur-2xl transition-all duration-500" />
-                  <step.icon className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-black relative z-10" />
-                  <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-7 h-7 sm:w-8 sm:h-8 bg-foreground text-gold rounded-full flex items-center justify-center text-xs sm:text-sm font-bold border-2 border-gold">
+                  <div className="absolute inset-0 rounded-full bg-gold/20 blur-md group-hover:blur-lg transition-all duration-500" />
+                  <step.icon className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-white relative z-10" />
+                  <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-7 h-7 sm:w-8 sm:h-8 bg-foreground text-brand-blue rounded-full flex items-center justify-center text-xs sm:text-sm font-bold border-2 border-brand-blue">
                     {index + 1}
                   </div>
                 </motion.div>
                 
                 <motion.div 
-                  className={`flex-1 bg-card border-2 border-gold/30 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 hover:border-gold hover:shadow-[0_20px_60px_-15px_hsl(45_80%_55%/0.4)] transition-all duration-500 group ${index % 2 === 1 ? 'md:text-right' : ''}`}
-                  whileHover={{ y: -8, scale: 1.02 }}
+                  className={`relative flex-1 bg-card border-2 border-brand-blue/30 rounded-xl sm:rounded-2xl p-5 sm:p-7 md:p-9 hover:border-brand-blue hover:shadow-[0_16px_40px_-14px_hsl(var(--brand-blue)/0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue transition-all duration-300 group ${index % 2 === 1 ? 'md:text-right' : ''}`}
+                  whileHover={{ y: -4, scale: 1.01 }}
+                  tabIndex={0}
                 >
-                  <p className="text-gold font-bold text-sm uppercase tracking-wider mb-3 inline-block px-3 py-1 bg-gold/10 rounded-full">
+                  <div className="pointer-events-none absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-br from-brand-blue/8 via-[hsl(var(--brand-blue)/0.08)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <p className="text-brand-blue font-semibold text-sm uppercase tracking-wider mb-3 inline-block px-3 py-1 bg-brand-blue/15 rounded-full">
                     {step.step}
                   </p>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-foreground group-hover:text-gold transition-colors duration-300">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-foreground group-hover:text-brand-blue transition-colors duration-300">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base md:text-lg">
+                  <p className="text-muted-foreground leading-relaxed text-base sm:text-base md:text-lg">
                     {step.description}
                   </p>
                   
@@ -101,15 +104,26 @@ export const HowItWorks = () => {
               
               {index < steps.length - 1 && (
                 <motion.div 
-                  className="absolute left-16 top-32 w-0.5 h-16 bg-gradient-to-b from-gold via-gold/50 to-transparent hidden md:block"
+                  className="absolute left-16 top-32 w-0.5 h-16 bg-gradient-to-b from-gold via-[hsl(var(--brand-blue)/0.5)] to-transparent hidden md:block"
                   initial={{ scaleY: 0 }}
                   whileInView={{ scaleY: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.2 + 0.4 }}
+                  transition={{ duration: prefersReducedMotion ? 0.3 : 0.5, delay: index * 0.15 + 0.3 }}
                 />
               )}
             </motion.div>
           ))}
+          <motion.div 
+            className="mt-8 sm:mt-12 flex justify-center"
+            initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: prefersReducedMotion ? 0.3 : 0.5 }}
+          >
+            <a href="#contact" className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-foreground text-background hover:bg-gold hover:text-foreground transition-colors duration-300 font-semibold ring-1 ring-foreground/20">
+              Book strategy call
+            </a>
+          </motion.div>
         </div>
       </div>
     </motion.section>

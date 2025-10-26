@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Instagram, LinkedinIcon, Music2, Youtube, Facebook, Twitter } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 interface BlogPost {
@@ -12,229 +12,133 @@ interface BlogPost {
   readTime: string;
   category: string;
   image: string;
+  platforms?: Array<"instagram" | "tiktok" | "linkedin" | "youtube" | "facebook" | "twitter">;
 }
 
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "How Virtual Assistants Can Save Your Business 70% on Operational Costs",
-    excerpt: "Discover the proven strategies that successful businesses use to dramatically reduce costs while maintaining quality through virtual assistants.",
+    title: "Instagram Growth in 90 Days: Content Pillars That Compound",
+    excerpt: "A repeatable pillar system (educate, proof, engage) with reels-first execution and weekly iteration.",
     content: `
-      <h2>The Cost Crisis in Modern Business</h2>
-      <p>In today's competitive market, businesses are constantly looking for ways to reduce operational costs without sacrificing quality. One of the most effective solutions that has emerged is the strategic use of virtual assistants.</p>
-      
-      <h3>Breaking Down the Savings</h3>
-      <p>When you hire a virtual assistant instead of a full-time employee, you save on:</p>
+      <h2>Pillars</h2>
       <ul>
-        <li>Office space and equipment</li>
-        <li>Benefits and insurance</li>
-        <li>Training and onboarding costs</li>
-        <li>Paid time off and sick leave</li>
-        <li>Taxes and administrative overhead</li>
+        <li>Educate: how-tos and frameworks your audience can use today</li>
+        <li>Proof: case studies, before/after, client shout-outs</li>
+        <li>Engage: polls, hot takes, challenges</li>
       </ul>
-      
-      <h3>Real-World Success Stories</h3>
-      <p>We've helped over 200 businesses achieve an average of 70% cost reduction. One e-commerce company reduced their customer service costs from €8,000/month to €2,400/month while actually improving response times.</p>
-      
-      <h3>Quality Doesn't Have to Suffer</h3>
-      <p>The key is working with a service that provides native quality control. At DON VA, every deliverable is reviewed by native German-speaking managers, ensuring your standards are always met.</p>
-      
-      <h3>Getting Started</h3>
-      <p>The transition to virtual assistants doesn't have to be complicated. Start with one VA handling routine tasks, measure the results, and scale from there. Most of our clients see positive ROI within the first month.</p>
+      <h3>Cadence</h3>
+      <p>3–4 reels/week + 1 carousel. Track saves and shares as leading indicators.</p>
     `,
-    author: "Michael Schmidt",
-    date: "March 15, 2024",
+    author: "Agency Team",
+    date: "September 22, 2025",
     readTime: "5 min read",
-    category: "Cost Optimization",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop"
+    category: "Instagram",
+    image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&h=500&fit=crop",
+    platforms: ["instagram"]
   },
   {
     id: 2,
-    title: "5 Tasks You Should Delegate to a Virtual Assistant Today",
-    excerpt: "Stop wasting time on routine tasks. Learn which activities you should delegate immediately to free up your schedule for strategic work.",
+    title: "TikTok Hooks That Stop the Scroll (With Examples)",
+    excerpt: "Seven high-converting hook patterns you can plug into your next 15-second video.",
     content: `
-      <h2>Time is Your Most Valuable Asset</h2>
-      <p>As a business owner or manager, your time should be spent on high-value activities that drive growth. Yet many professionals find themselves bogged down in routine tasks that could easily be delegated.</p>
-      
-      <h3>1. Email Management</h3>
-      <p>Your VA can filter, categorize, and respond to routine emails, flagging only the important ones for your attention. This alone can save 2-3 hours per day.</p>
-      
-      <h3>2. Calendar Management</h3>
-      <p>Let your VA handle scheduling, rescheduling, and coordinating meetings. They can manage time zones, send reminders, and ensure you're always prepared.</p>
-      
-      <h3>3. Social Media Management</h3>
-      <p>Content scheduling, engagement monitoring, and basic customer service on social platforms can all be handled by a skilled VA.</p>
-      
-      <h3>4. Data Entry and Research</h3>
-      <p>Whether it's updating CRM systems, conducting market research, or compiling reports, VAs excel at these detail-oriented tasks.</p>
-      
-      <h3>5. Customer Support</h3>
-      <p>First-line customer support, handling common questions, and escalating complex issues can be managed efficiently by trained VAs.</p>
-      
-      <h3>The Impact</h3>
-      <p>By delegating these five tasks, most executives free up 15-20 hours per week. That's time you can reinvest in strategy, business development, or work-life balance.</p>
+      <h2>Hook Patterns</h2>
+      <ul>
+        <li>Counter-intuitive claim</li>
+        <li>POV transformation</li>
+        <li>Myth vs reality</li>
+        <li>Numbered promise</li>
+      </ul>
+      <p>Record front-facing with captions and fast cuts. Keep the first 2 seconds punchy.</p>
     `,
-    author: "Sarah Weber",
-    date: "March 10, 2024",
+    author: "Creative Lab",
+    date: "October 3, 2025",
     readTime: "4 min read",
-    category: "Productivity",
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop"
+    category: "TikTok",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=500&fit=crop",
+    platforms: ["tiktok", "instagram"]
   },
   {
     id: 3,
-    title: "The Complete Guide to Scaling Your Business with Virtual Teams",
-    excerpt: "Learn the proven framework for building and managing a high-performing virtual team that drives real business results.",
+    title: "LinkedIn Carousel System for B2B Inbound",
+    excerpt: "Swipe-friendly frames that convert profile views into pipeline.",
     content: `
-      <h2>Why Virtual Teams are the Future</h2>
-      <p>The traditional office model is becoming obsolete. Virtual teams offer flexibility, cost savings, and access to global talent that physical offices simply can't match.</p>
-      
-      <h3>Phase 1: Starting Small</h3>
-      <p>Begin with one VA handling a specific function. This allows you to:</p>
+      <h2>Template</h2>
       <ul>
-        <li>Test the waters with minimal risk</li>
-        <li>Develop your management processes</li>
-        <li>Identify what works for your business</li>
-        <li>Build confidence in the model</li>
+        <li>Frame 1: outcome promise</li>
+        <li>Frames 2–6: steps, proof, examples</li>
+        <li>Frame 7: CTA (demo, guide, or checklist)</li>
       </ul>
-      
-      <h3>Phase 2: Expanding Strategically</h3>
-      <p>Once you've proven the concept, scale strategically. Add VAs for complementary functions, creating a well-rounded team that covers all your operational needs.</p>
-      
-      <h3>Phase 3: Building Systems</h3>
-      <p>As your team grows, invest in proper systems:</p>
-      <ul>
-        <li>Project management tools (Asana, Trello)</li>
-        <li>Communication platforms (Slack, Teams)</li>
-        <li>Documentation and SOPs</li>
-        <li>Performance tracking metrics</li>
-      </ul>
-      
-      <h3>Managing Across Time Zones</h3>
-      <p>With VAs in different time zones, you can achieve 24/7 operations. The key is clear handoff procedures and asynchronous communication practices.</p>
-      
-      <h3>Quality Control</h3>
-      <p>This is where many businesses struggle. At DON VA, we solve this with native German managers who review all work before delivery, ensuring consistent quality.</p>
-      
-      <h3>The Results</h3>
-      <p>Companies that successfully scale with virtual teams typically see 3x growth in operational capacity without proportional cost increases. It's not just about saving money—it's about scaling smart.</p>
+      <p>Post 2x/week per leader. Repurpose to short-form video.</p>
     `,
-    author: "Thomas Müller",
-    date: "March 5, 2024",
-    readTime: "7 min read",
-    category: "Business Growth",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop"
+    author: "Strategy",
+    date: "August 29, 2025",
+    readTime: "6 min read",
+    category: "LinkedIn",
+    image: "https://images.unsplash.com/photo-1515165562835-c3b8c1ea36cb?w=800&h=500&fit=crop",
+    platforms: ["linkedin"]
   },
   {
     id: 4,
-    title: "Remote Work Revolution: Why Virtual Assistants Are Essential in 2024",
-    excerpt: "The future of work is here. Discover why businesses that embrace virtual assistants are outperforming their competitors.",
+    title: "UGC That Converts: How to Brief Creators",
+    excerpt: "A clear brief template and angle matrix to get on-brand content that sells.",
     content: `
-      <h2>The Shift to Remote Work</h2>
-      <p>The pandemic accelerated a trend that was already underway: the shift to remote work. Now, businesses are discovering that virtual assistants offer advantages that go far beyond cost savings.</p>
-      
-      <h3>Access to Global Talent</h3>
-      <p>When you're not limited by geography, you can hire the best person for the job, regardless of where they live. This means access to specialized skills that might not be available in your local market.</p>
-      
-      <h3>24/7 Operations</h3>
-      <p>With VAs in different time zones, your business never sleeps. Customer inquiries get answered, tasks get completed, and opportunities don't slip through the cracks.</p>
-      
-      <h3>Flexibility and Scalability</h3>
-      <p>Need more support during peak season? Scale up. Slower period? Scale down. Virtual assistants offer flexibility that traditional hiring simply can't match.</p>
-      
-      <h3>The Competitive Advantage</h3>
-      <p>Companies using virtual assistants are moving faster, spending less, and achieving more. In today's competitive market, that's not just an advantage—it's essential for survival.</p>
+      <h2>Brief Template</h2>
+      <ul>
+        <li>Audience + outcome</li>
+        <li>Do/Don'ts and claims</li>
+        <li>Angles to test</li>
+        <li>Deliverables and file specs</li>
+      </ul>
+      <p>Test 3 hooks per angle. Keep winners in rotation.</p>
     `,
-    author: "Anna Fischer",
-    date: "February 28, 2024",
-    readTime: "6 min read",
-    category: "Remote Work",
-    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=500&fit=crop"
+    author: "Creator Ops",
+    date: "July 18, 2025",
+    readTime: "7 min read",
+    category: "UGC",
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=500&fit=crop",
+    platforms: ["instagram", "tiktok", "youtube"]
   },
   {
     id: 5,
-    title: "How to Onboard a Virtual Assistant: A Step-by-Step Guide",
-    excerpt: "Get your new VA up to speed quickly with this comprehensive onboarding framework used by successful businesses.",
+    title: "Content Calendar: The Minimal System That Sticks",
+    excerpt: "A simple workflow that keeps you posting across IG, TikTok, and LinkedIn without burnout.",
     content: `
-      <h2>The Importance of Proper Onboarding</h2>
-      <p>A well-structured onboarding process is crucial for VA success. It sets expectations, builds confidence, and ensures your VA can hit the ground running.</p>
-      
-      <h3>Week 1: Foundation</h3>
-      <p>Start with the basics:</p>
+      <h2>Workflow</h2>
       <ul>
-        <li>Company overview and values</li>
-        <li>Tool access and training</li>
-        <li>Communication protocols</li>
-        <li>Initial task assignments</li>
+        <li>Mon: Ideate + outline</li>
+        <li>Tue: Shoot + design</li>
+        <li>Wed: Edit + caption</li>
+        <li>Thu: Schedule + community</li>
+        <li>Fri: Report + learnings</li>
       </ul>
-      
-      <h3>Week 2: Integration</h3>
-      <p>Deepen their understanding:</p>
-      <ul>
-        <li>Process documentation review</li>
-        <li>Team introductions</li>
-        <li>More complex task assignments</li>
-        <li>First feedback session</li>
-      </ul>
-      
-      <h3>Week 3-4: Independence</h3>
-      <p>Build autonomy:</p>
-      <ul>
-        <li>Gradual reduction in oversight</li>
-        <li>Problem-solving opportunities</li>
-        <li>Performance metrics review</li>
-        <li>Long-term goal setting</li>
-      </ul>
-      
-      <h3>Best Practices</h3>
-      <p>Document everything, communicate clearly, provide regular feedback, and celebrate wins. A good onboarding process pays dividends for months to come.</p>
     `,
-    author: "Marcus Klein",
-    date: "February 20, 2024",
+    author: "Project Mgmt",
+    date: "June 7, 2025",
     readTime: "5 min read",
-    category: "Management",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop"
+    category: "Workflow",
+    image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&h=500&fit=crop",
+    platforms: ["instagram", "tiktok", "linkedin"]
   },
   {
     id: 6,
-    title: "Virtual Assistants vs. Full-Time Employees: A Cost Comparison",
-    excerpt: "Breaking down the real costs of hiring. The numbers might surprise you.",
+    title: "From Vanity Metrics to Revenue: The Social Scorecard",
+    excerpt: "Metrics that matter and how to report them to leadership.",
     content: `
-      <h2>The True Cost of Employment</h2>
-      <p>When comparing VAs to full-time employees, most businesses only look at salary. But the real cost of employment goes much deeper.</p>
-      
-      <h3>Full-Time Employee Costs</h3>
-      <p>For a €40,000/year employee, actual costs include:</p>
+      <h2>Scorecard</h2>
       <ul>
-        <li>Base salary: €40,000</li>
-        <li>Benefits (health, pension): €8,000</li>
-        <li>Taxes and insurance: €6,000</li>
-        <li>Office space and equipment: €4,000</li>
-        <li>Training and development: €2,000</li>
-        <li>Paid time off (20 days): €3,000</li>
-        <li><strong>Total: €63,000/year</strong></li>
+        <li>Organic: reach, ER, saves, shares</li>
+        <li>Paid: CTR, CVR, CAC, ROAS</li>
+        <li>Revenue: demo requests, assisted revenue</li>
       </ul>
-      
-      <h3>Virtual Assistant Costs</h3>
-      <p>For equivalent work output:</p>
-      <ul>
-        <li>VA service fee: €18,000/year</li>
-        <li>No benefits required</li>
-        <li>No office costs</li>
-        <li>No paid time off</li>
-        <li><strong>Total: €18,000/year</strong></li>
-      </ul>
-      
-      <h3>The Savings</h3>
-      <p>That's a 71% cost reduction. And this doesn't even account for recruitment costs, turnover, or management overhead.</p>
-      
-      <h3>When to Choose Each</h3>
-      <p>Full-time employees make sense for core strategic roles. VAs excel at operational tasks, support functions, and scalable work.</p>
+      <p>Include UTMs and qualitative notes from comments/DMs.</p>
     `,
-    author: "Lisa Hoffmann",
-    date: "February 15, 2024",
+    author: "Analytics",
+    date: "May 24, 2025",
     readTime: "6 min read",
-    category: "Cost Analysis",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop"
+    category: "Analytics",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=500&fit=crop",
+    platforms: ["instagram", "tiktok", "linkedin", "facebook", "twitter"]
   }
 ];
 
@@ -266,70 +170,82 @@ export const Blog = () => {
             Blog & <span className="text-gold">Resources</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            Expert tips, strategies, and insights to help you scale your business with virtual assistants.
+            Strategies, templates, and playbooks to grow with social—content, community, paid, and analytics.
           </p>
         </motion.div>
 
         {/* Blog Grid */}
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
             {blogPosts.map((post, index) => (
-            <motion.article
-              key={post.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group bg-card border border-border/50 rounded-xl sm:rounded-2xl overflow-hidden hover:border-gold/50 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.2)] transition-all duration-300 cursor-pointer w-full"
-              onClick={() => navigate(`/blog/${post.id}`)}
-              whileHover={{ y: -8 }}
-            >
-              {/* Image */}
-              <div className="relative h-44 sm:h-52 md:h-48 lg:h-56 overflow-hidden">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-gold text-foreground text-xs font-bold rounded-full">
-                    {post.category}
-                  </span>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-4 sm:p-5 lg:p-6">
-                <div className="flex items-center gap-3 sm:gap-4 text-xs text-muted-foreground mb-2 sm:mb-3">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3" />
-                    <span>{post.date}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-3 h-3" />
-                    <span>{post.readTime}</span>
+              <motion.article
+                key={post.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group bg-card border border-border/50 rounded-lg sm:rounded-xl lg:rounded-2xl overflow-hidden hover:border-gold/50 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.2)] transition-all duration-300 cursor-pointer w-full flex flex-col"
+                onClick={() => navigate(`/blog/${post.id}`)}
+                whileHover={{ y: -8 }}
+              >
+                {/* Image */}
+                <div className="relative h-48 sm:h-52 lg:h-56 overflow-hidden flex-shrink-0">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
+                    <span className="px-2.5 py-1 sm:px-3 bg-gold text-foreground text-[10px] sm:text-xs font-bold rounded-full">
+                      {post.category}
+                    </span>
                   </div>
                 </div>
 
-                <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-2 sm:mb-3 text-foreground group-hover:text-gold transition-colors line-clamp-2">
-                  {post.title}
-                </h3>
+                {/* Content */}
+                <div className="p-4 sm:p-5 lg:p-6 flex flex-col flex-grow">
+                  <div className="flex items-center gap-2 sm:gap-3 text-[10px] sm:text-xs text-muted-foreground mb-2 sm:mb-3 flex-wrap">
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      <span className="truncate">{post.date}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
 
-                <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3">
-                  {post.excerpt}
-                </p>
+                  <h3 className="text-sm sm:text-base lg:text-lg font-bold mb-2 sm:mb-3 text-foreground group-hover:text-gold transition-colors line-clamp-2">
+                    {post.title}
+                  </h3>
 
-                <div className="flex items-center justify-between">
-                  <span className="text-xs sm:text-sm text-muted-foreground">By {post.author}</span>
-                  <div className="flex items-center gap-1 sm:gap-2 text-gold font-semibold text-xs sm:text-sm group-hover:gap-2 sm:group-hover:gap-3 transition-all">
-                    <span className="hidden sm:inline">Read More</span>
-                    <span className="sm:hidden">Read</span>
-                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4 line-clamp-2 leading-relaxed">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="flex items-center justify-between mt-auto pt-3 border-t border-border/30">
+                    <span className="text-[10px] sm:text-xs text-muted-foreground truncate">By {post.author}</span>
+                    <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
+                      {post.platforms && (
+                        <div className="flex items-center gap-1.5 sm:gap-2 text-muted-foreground/70">
+                          {post.platforms.includes("instagram") && <Instagram className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="Instagram" />}
+                          {post.platforms.includes("tiktok") && <Music2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="TikTok" />}
+                          {post.platforms.includes("linkedin") && <LinkedinIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="LinkedIn" />}
+                          {post.platforms.includes("youtube") && <Youtube className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="YouTube" />}
+                          {post.platforms.includes("facebook") && <Facebook className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="Facebook" />}
+                          {post.platforms.includes("twitter") && <Twitter className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="X" />}
+                        </div>
+                      )}
+                      <div className="flex items-center gap-1 text-gold font-semibold text-[10px] sm:text-xs group-hover:gap-1.5 transition-all">
+                        <span className="hidden sm:inline">Read</span>
+                        <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.article>
-          ))}
+              </motion.article>
+            ))}
           </div>
         </div>
       </div>

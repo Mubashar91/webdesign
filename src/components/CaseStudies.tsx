@@ -28,119 +28,119 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     id: 1,
-    title: "E-Commerce Giant Reduces Costs by 70% While Scaling Operations",
+    title: "E‑commerce Brand Doubles Engagement and Lifts ROAS with Reels‑first Strategy",
     company: "TechMart GmbH",
-    industry: "E-Commerce",
-    challenge: "TechMart was spending €42,000/month on customer service with a team of 7 full-time employees. Response times were slow, and scaling for peak seasons was expensive and complicated.",
-    solution: "We implemented a team of 5 dedicated VAs handling customer inquiries, order processing, and basic technical support. Native German managers ensured quality control on all customer communications.",
+    industry: "E‑commerce",
+    challenge: "Paid ads were plateauing and organic reach was declining. Creative fatigue and irregular posting hurt performance across Instagram and TikTok.",
+    solution: "We built a Reels‑first content system: 12 monthly short‑form videos, weekly carousels, story polls, and UGC integration. Paid social used creative testing and audience exclusions.",
     results: [
       {
-        metric: "Cost Reduction",
-        value: "70%",
-        description: "Monthly operational costs dropped from €42,000 to €12,600"
+        metric: "Engagement Rate",
+        value: "+118%",
+        description: "Average ER rose from 2.1% to 4.6% in 90 days"
       },
       {
-        metric: "Response Time",
-        value: "65% Faster",
-        description: "Average response time improved from 4 hours to 1.4 hours"
+        metric: "Followers",
+        value: "+32K",
+        description: "Net new followers across IG + TikTok"
       },
       {
-        metric: "Customer Satisfaction",
-        value: "4.8/5",
-        description: "Up from 3.9/5, with 95% positive feedback"
+        metric: "ROAS",
+        value: "4.2x",
+        description: "After creative testing and budget reallocation"
       },
       {
-        metric: "Scalability",
-        value: "3x Capacity",
-        description: "Can now handle 3x more inquiries during peak seasons"
+        metric: "CPM",
+        value: "−28%",
+        description: "Lowered cost to reach qualified audiences"
       }
     ],
-    testimonial: "DON VA transformed our customer service operations. We're saving €350,000 annually while providing better service than ever before. The native German quality control was the game-changer.",
+    testimonial: "Our social finally performs. Reels + creative testing turned things around fast—stronger engagement and profitable spend.",
     testimonialAuthor: "Stefan Richter",
     testimonialRole: "CEO, TechMart GmbH",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop",
     stats: {
-      costSaved: "€350K/year",
-      timeframe: "3 months",
-      vaCount: "5 VAs"
+      costSaved: "4.2x ROAS",
+      timeframe: "90 days",
+      vaCount: "IG + TikTok + Meta Ads"
     }
   },
   {
     id: 2,
-    title: "Marketing Agency Scales to 50+ Clients Without Hiring Full-Time Staff",
+    title: "Local Restaurant Group Grows Reservations with UGC + Geo‑targeted Ads",
     company: "Digital Dynamics",
-    industry: "Marketing Agency",
-    challenge: "Rapid growth meant the agency needed to scale operations quickly. Hiring full-time staff was slow and expensive, and project demands fluctuated significantly.",
-    solution: "We provided a flexible team of 8 VAs specializing in social media management, content creation, client reporting, and administrative tasks. The team scaled up and down based on project needs.",
+    industry: "Hospitality",
+    challenge: "Low weekday footfall and poor attribution from social. Limited content variety and sparse community engagement.",
+    solution: "Launched UGC program, influencer seeding, story highlights for menus, and geo‑targeted offers. Rolled out weekly reels and boosted top performers.",
     results: [
       {
-        metric: "Client Growth",
-        value: "150%",
-        description: "Grew from 20 to 50 clients in 6 months"
+        metric: "Reservations",
+        value: "+63%",
+        description: "Weekday bookings in 8 weeks"
       },
       {
-        metric: "Cost Efficiency",
-        value: "€180K Saved",
-        description: "Compared to hiring equivalent full-time staff"
+        metric: "CPL",
+        value: "−41%",
+        description: "Lower cost per reservation lead"
       },
       {
-        metric: "Project Delivery",
-        value: "40% Faster",
-        description: "Improved turnaround times on all deliverables"
+        metric: "Reviews",
+        value: "+1.2k",
+        description: "More Google/IG reviews via community prompts"
       },
       {
-        metric: "Team Flexibility",
-        value: "100%",
-        description: "Can scale team size within 48 hours"
+        metric: "Reach",
+        value: "+220%",
+        description: "Across IG + TikTok near locations"
       }
     ],
-    testimonial: "We couldn't have scaled this fast with traditional hiring. DON VA gave us the flexibility to grow without the overhead. Our clients are happier, and our margins are better.",
+    testimonial: "UGC and local ads worked. We saw sustained weekday growth and better reviews—exactly what we needed.",
     testimonialAuthor: "Julia Becker",
     testimonialRole: "Founder, Digital Dynamics",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop",
     stats: {
-      costSaved: "€180K/year",
-      timeframe: "6 months",
-      vaCount: "8 VAs"
+      costSaved: "+63% reservations",
+      timeframe: "8 weeks",
+      vaCount: "UGC + IG + TikTok + Ads"
     }
   },
   {
     id: 3,
-    title: "SaaS Startup Achieves 24/7 Support Coverage on a Lean Budget",
+    title: "SaaS App Lowers CAC with Creative Testing and LinkedIn Distribution",
     company: "CloudFlow Solutions",
     industry: "SaaS",
-    challenge: "As a startup with global customers, CloudFlow needed 24/7 support but couldn't afford a full-time team across multiple time zones. Customer churn was increasing due to slow response times.",
-    solution: "We deployed a distributed team of 4 VAs across different time zones, providing round-the-clock coverage. They handled tier-1 support, onboarding, and documentation.",
+    challenge: "Rising CPMs and stagnant CTRs on Meta; weak content distribution on LinkedIn limited demo pipeline.",
+    solution: "Monthly creative sprints for hooks and angles, LinkedIn carousel series for founders, and retargeting to high‑intent visitors.",
     results: [
       {
-        metric: "Support Coverage",
-        value: "24/7",
-        description: "From 9-5 to round-the-clock availability"
+        metric: "CAC",
+        value: "−34%",
+        description: "Lower customer acquisition cost from paid social"
       },
       {
-        metric: "Customer Churn",
-        value: "45% Reduction",
-        description: "Churn dropped from 8% to 4.4% monthly"
+        metric: "Demo Requests",
+        value: "+78%",
+        description: "From LinkedIn distribution and retargeting"
       },
       {
-        metric: "Cost Savings",
-        value: "€120K/year",
-        description: "Compared to hiring full-time support team"
+        metric: "CTR",
+        value: "+52%",
+        description: "On best performing creatives"
       },
       {
-        metric: "Response Time",
-        value: "Under 30 min",
-        description: "Average first response time across all time zones"
+        metric: "Sales Cycle",
+        value: "−19%",
+        description: "Shorter time from MQL to demo"
       }
     ],
-    testimonial: "DON VA made 24/7 support possible for our startup. The ROI was immediate - reduced churn alone paid for the service 3x over. Our customers love the fast response times.",
+    testimonial: "The creative testing cadence changed our paid results, and the LinkedIn playbook filled the top of funnel.",
     testimonialAuthor: "Marco Schneider",
     testimonialRole: "CTO, CloudFlow Solutions",
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=500&fit=crop",
     stats: {
-      costSaved: "€120K/year",
-      timeframe: "4 months",
-      vaCount: "4 VAs"
+      costSaved: "−34% CAC",
+      timeframe: "3 months",
+      vaCount: "Meta + LinkedIn"
     }
   }
 ];
@@ -172,10 +172,10 @@ export const CaseStudies = () => {
             Success Stories
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-foreground">
-            Real Results from <span className="text-gold">Real Businesses</span>
+            Social Media Success Stories
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            See how companies like yours achieved dramatic cost savings and operational improvements with DON VA.
+            See how brands grew reach, engagement, and revenue with our dedicated SMM programs.
           </p>
         </motion.div>
 
@@ -216,15 +216,15 @@ export const CaseStudies = () => {
                 <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-4 sm:mb-5 pb-4 sm:pb-5 border-b border-border">
                   <div className="text-center">
                     <div className="text-gold font-bold text-sm sm:text-base lg:text-lg">{study.stats.costSaved}</div>
-                    <div className="text-[10px] sm:text-xs text-muted-foreground">Saved</div>
+                    <div className="text-[10px] sm:text-xs text-muted-foreground">Result</div>
                   </div>
                   <div className="text-center">
                     <div className="text-gold font-bold text-sm sm:text-base lg:text-lg">{study.stats.vaCount}</div>
-                    <div className="text-[10px] sm:text-xs text-muted-foreground">Team Size</div>
+                    <div className="text-[10px] sm:text-xs text-muted-foreground">Channels</div>
                   </div>
                   <div className="text-center">
                     <div className="text-gold font-bold text-sm sm:text-base lg:text-lg">{study.stats.timeframe}</div>
-                    <div className="text-[10px] sm:text-xs text-muted-foreground">Timeline</div>
+                    <div className="text-[10px] sm:text-xs text-muted-foreground">Timeframe</div>
                   </div>
                 </div>
 

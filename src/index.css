@@ -14,104 +14,120 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Premium Black & Gold Theme */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    /* SMM Agency Purple + Blue Theme (Light, polished) */
+    --background: 228 33% 99%;
+    --foreground: 233 25% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 233 20% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 233 20% 12%;
 
-    --primary: 0 0% 0%;
+    --primary: 265 80% 55%; /* vibrant purple */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 230 25% 96%;
+    --secondary-foreground: 233 20% 12%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 228 30% 97%;
+    --muted-foreground: 228 10% 38%;
 
-    --accent: 45 75% 52%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 265 80% 55%; /* purple accent */
+    --accent-foreground: 0 0% 100%;
+
+    --hover: 228 24% 93%;
+    --hover-foreground: 233 25% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 45 75% 52%;
+    --border: 228 20% 86%;
+    --input: 228 20% 86%;
+    --ring: 265 80% 55%;
 
     --radius: 0.5rem;
 
     /* Custom tokens */
-    --gold: 45 75% 52%;
-    --gold-dark: 45 75% 42%;
-    --gold-light: 45 75% 62%;
+    --gold: 265 80% 55%;      /* repurposed as purple */
+    --gold-dark: 265 80% 45%;
+    --gold-light: 265 80% 65%;
+    --brand-blue: 220 85% 60%; /* deep blue for gradients and accents */
     
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(45 75% 42%) 0%, hsl(45 75% 52%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(0 0% 0%) 0%, hsl(0 0% 8%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(265 80% 50%) 0%, hsl(var(--brand-blue)) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(230 30% 12%) 0%, hsl(230 30% 18%) 100%);
     
     /* Shadows */
-    --shadow-gold: 0 10px 40px -10px hsl(45 75% 52% / 0.5);
-    --shadow-gold-lg: 0 25px 80px -20px hsl(45 75% 52% / 0.6);
-    --shadow-elegant: 0 20px 60px -15px hsl(0 0% 0% / 0.3);
-    --shadow-brutal: 8px 8px 0px hsl(45 75% 52%);
+    --shadow-gold: 0 10px 40px -10px hsl(265 80% 55% / 0.5);
+    --shadow-gold-lg: 0 25px 80px -20px hsl(265 80% 55% / 0.6);
+    --shadow-elegant: 0 20px 60px -15px hsl(230 30% 20% / 0.3);
+    --shadow-brutal: 8px 8px 0px hsl(265 80% 55%);
     
     /* Transitions */
     --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 232 25% 97%;
+    --sidebar-foreground: 233 20% 12%;
+    --sidebar-primary: 265 80% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 25% 95%;
+    --sidebar-accent-foreground: 233 20% 12%;
+    --sidebar-border: 230 20% 88%;
+    --sidebar-ring: 265 80% 55%;
+
+    /* Typographic + layout tokens */
+    --heading-color: 0 0% 0%;
+    --heading-size: 1.5rem;
+    --side-padding: 1.5rem;
   }
 
   .dark {
-    --background: 0 0% 0%;
+    /* SMM Agency Purple + Blue Theme (Dark) */
+    --background: 230 30% 10%; /* deep blue */
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 5%;
+    --card: 230 30% 14%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 5%;
+    --popover: 230 30% 14%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 265 80% 65%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 10%;
+    --secondary: 230 25% 16%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 230 25% 16%;
+    --muted-foreground: 230 10% 70%;
 
-    --accent: 45 75% 52%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 265 80% 65%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
+    --hover: 230 25% 20%;
+    --hover-foreground: 0 0% 100%;
+
+    --destructive: 350 84% 48%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 45 75% 52%;
+    --border: 230 20% 26%;
+    --input: 230 20% 26%;
+    --ring: 265 80% 65%;
     
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-background: 230 30% 12%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 265 80% 65%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 230 25% 16%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 230 20% 26%;
+    --sidebar-ring: 265 80% 65%;
+
+    --heading-color: 0 0% 100%;
+    --brand-blue: 220 90% 65%;
   }
 }
 
@@ -128,7 +144,15 @@ All colors MUST be HSL.
  h1, h2, h3, h4, h5, h6 {
   @apply font-poppins font-bold;
   text-align: left !important;
-}
+  color: hsl(var(--heading-color));
+ }
+
+ h1 { font-size: calc(var(--heading-size) * 1.6); }
+ h2 { font-size: calc(var(--heading-size) * 1.4); }
+ h3 { font-size: calc(var(--heading-size) * 1.2); }
+ h4 { font-size: var(--heading-size); }
+ h5 { font-size: calc(var(--heading-size) * 0.9); }
+ h6 { font-size: calc(var(--heading-size) * 0.8); }
 }
 
 @layer utilities {
@@ -141,5 +165,10 @@ All colors MUST be HSL.
   .scrollbar-hide {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+  }
+
+  .app-shell {
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
   }
 }

@@ -62,7 +62,7 @@ export const BookMeeting = () => {
                 whileHover={{ rotate: 5, scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >
-                <span className="text-black font-black text-xl sm:text-2xl">L</span>
+                <span className="text-foreground font-black text-xl sm:text-2xl">L</span>
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </motion.div>
               <div className="flex flex-col">
@@ -106,7 +106,7 @@ export const BookMeeting = () => {
               >
                 <Button
                   onClick={() => document.querySelector('.calendly-inline-widget')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-gradient-to-r from-gold to-yellow-600 hover:from-yellow-600 hover:to-gold text-black font-bold px-6 py-2 rounded-xl shadow-lg hover:shadow-xl hover:shadow-gold/30 transition-all duration-300 border-2 border-gold/50"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-gold to-yellow-600 hover:from-yellow-600 hover:to-gold text-foreground font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2"
                 >
                   <Calendar className="w-4 h-4 mr-2" />
                   Book Now
@@ -163,7 +163,7 @@ export const BookMeeting = () => {
                         document.querySelector('.calendly-inline-widget')?.scrollIntoView({ behavior: 'smooth' });
                         setMobileMenuOpen(false);
                       }}
-                      className="w-full bg-gradient-to-r from-gold to-yellow-600 hover:from-yellow-600 hover:to-gold text-black font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="w-full bg-gradient-to-r from-gold to-yellow-600 hover:from-yellow-600 hover:to-gold text-foreground font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                       <Calendar className="w-5 h-5 mr-2" />
                       Book Your Meeting Now
@@ -439,7 +439,7 @@ export const BookMeeting = () => {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-gradient-to-br from-gold to-yellow-600 rounded-lg flex items-center justify-center">
-                <span className="text-black font-extrabold text-sm">L</span>
+                <span className="text-foreground font-extrabold text-sm">L</span>
               </div>
               <span className="text-lg font-bold">LuxVA</span>
             </div>

@@ -4,24 +4,24 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Michael Schmidt",
-    company: "TechFlow GmbH",
+    name: "Emma Rodriguez",
+    company: "Luxe Beauty Co.",
+    role: "Founder",
+    content: "Our Instagram went from 2K to 47K followers in 6 months. The reels strategy they built is pure gold—engagement is through the roof.",
+    rating: 5
+  },
+  {
+    name: "David Chen",
+    company: "Peak Performance Coaching",
     role: "CEO",
-    content: "DON VA helped us scale our customer support without compromising quality. We cut costs by 65% and improved response times significantly.",
+    content: "LinkedIn was a ghost town for us. Now we're getting 3–5 qualified leads per week from organic content alone. Game changer.",
     rating: 5
   },
   {
-    name: "Sarah Weber",
-    company: "Digital Marketing Pro",
-    role: "Marketing Director",
-    content: "The social media management has been exceptional. Our engagement tripled, and the quality control is genuinely native-level.",
-    rating: 5
-  },
-  {
-    name: "Thomas Müller",
-    company: "E-Commerce Solutions",
-    role: "Operations Manager",
-    content: "Finally found VAs that actually understand our business. The 24h replacement guarantee gave us confidence to scale quickly.",
+    name: "Sophie Martens",
+    company: "Urban Eats",
+    role: "Marketing Lead",
+    content: "They handle everything—content, community, analytics. Our TikTok blew up and we're seeing real foot traffic from it. Worth every cent.",
     rating: 5
   }
 ];
@@ -45,10 +45,10 @@ export const Testimonials = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-2">
-            Trusted by <span className="text-gold">Growing Businesses</span>
+            Trusted by <span className="text-gold">Brands That Grow</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl px-2">
-            Real results from real companies scaling with DON VA.
+            Real growth from real brands who partnered with us.
           </p>
         </motion.div>
 
@@ -93,10 +93,10 @@ export const Testimonials = () => {
               Success Story
             </span>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
-              Case Study: <span className="text-gold">70% Cost Reduction</span>
+              Case Study: <span className="text-gold">340% Follower Growth in 90 Days</span>
             </h3>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-5 sm:mb-6 leading-relaxed max-w-3xl">
-              See how a mid-sized e-commerce company reduced their operational costs by €42,000 annually while improving service quality.
+              See how a local wellness brand scaled from 8K to 35K followers and turned Instagram into their #1 revenue channel.
             </p>
             <Button variant="gold" size="lg" className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
               View Full Case Study

@@ -22,7 +22,7 @@ export const Hero = () => {
     >
       {/* Animated background */}
       <motion.div 
-        className="absolute inset-0 bg-gradient-to-br from-background via-background to-gold/5 z-0"
+        className="absolute inset-0 bg-gradient-to-br from-background via-background to-[hsl(var(--brand-blue)/0.08)] z-0"
         style={{ y }}
       />
       
@@ -39,21 +39,15 @@ export const Hero = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="inline-block mb-3 sm:mb-4 md:mb-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-gold/10 border border-gold/30 rounded-full text-gold text-xs sm:text-sm font-semibold"
             >
-              Trusted by 200+ Growing Businesses
+              Trusted by 200+ Growing Brands
             </motion.div>
             
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-5 md:mb-6 leading-[1.15] sm:leading-[1.12] md:leading-[1.1]">
-              Save <span className="bg-gradient-to-r from-gold to-yellow-400 bg-clip-text text-transparent">70%</span> on Operations.
-              <br className="hidden xs:block" />
-              <span className="block xs:inline"><span className="bg-gradient-to-r from-gold to-yellow-400 bg-clip-text text-transparent">Scale Faster</span> with Virtual Assistants.</span>
-              <br className="hidden xs:block" />
-              <span className="block xs:inline-block text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-light text-muted-foreground italic mt-2">
-                But Good.
-              </span>
+              Grow Your Brand on <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">Instagram, TikTok & LinkedIn</span>
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-3 sm:mb-4 md:mb-5 leading-relaxed max-w-xl">
-              Reliable VAs. Native Quality Control. No Overhead.
+              Full-service social media management: content, community, analytics — all handled for you.
             </p>
             
             <motion.div
@@ -67,7 +61,7 @@ export const Hero = () => {
                 size="lg"
                 onClick={() => window.location.href = '/book-meeting'}
                 className="group relative w-full sm:w-auto text-sm sm:text-base md:text-lg px-8 sm:px-10 md:px-12 py-5 sm:py-6 md:py-7 h-auto font-bold shadow-gold-lg transform hover:scale-[1.06] hover:-translate-y-2 transition-all duration-400 hover:brightness-110 cursor-pointer overflow-hidden rounded-xl border-2 border-transparent hover:border-yellow-400/30"
-                aria-label="Book a free 15-minute consultation"
+                aria-label="Book a free 15-minute SMM strategy call"
               >
                 {/* Subtle shimmer effect */}
                 <motion.div
@@ -85,13 +79,13 @@ export const Hero = () => {
                 />
                 
                 {/* Enhanced hover glow */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-gold via-yellow-400 to-gold rounded-xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-300" aria-hidden="true" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] rounded-xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-300" aria-hidden="true" />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
                 
                 <span className="relative z-10 flex items-center justify-center gap-2.5">
                   <Calendar className="w-5 h-5 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" aria-hidden="true" />
-                  <span className="hidden sm:inline font-semibold group-hover:tracking-wide transition-all duration-300">Book a Free Consultation (15 min)</span>
-                  <span className="sm:hidden font-semibold group-hover:tracking-wide transition-all duration-300">Book Free Consultation</span>
+                  <span className="hidden sm:inline font-semibold group-hover:tracking-wide transition-all duration-300">Book Free Strategy Call (15 min)</span>
+                  <span className="sm:hidden font-semibold group-hover:tracking-wide transition-all duration-300">Book Strategy Call</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" aria-hidden="true" />
                 </span>
               </Button>
@@ -123,9 +117,10 @@ export const Hero = () => {
           
           <motion.div
             className="relative lg:ml-auto mt-8 sm:mt-10 lg:mt-0"
-            initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
-            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.6, -0.05, 0.01, 0.99] }}
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.4, ease: [0.6, -0.05, 0.01, 0.99] }}
+            style={{ perspective: 1200 }}
           >
             {/* Floating badge */}
             <motion.div
@@ -144,52 +139,56 @@ export const Hero = () => {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="bg-gradient-to-br from-gold via-yellow-400 to-amber-500 text-background px-3 py-2 sm:px-4 sm:py-2.5 rounded-full shadow-lg border-2 border-background flex items-center gap-1.5 sm:gap-2"
+                className="bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-background px-3 py-2 sm:px-4 sm:py-2.5 rounded-full shadow-lg border-2 border-background flex items-center gap-1.5 sm:gap-2"
               >
                 <Award className="w-3 h-3 sm:w-4 sm:h-4" aria-hidden="true" />
                 <span className="text-[10px] sm:text-xs font-bold whitespace-nowrap">Top Rated</span>
               </motion.div>
             </motion.div>
             
-            <div className="relative rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] sm:shadow-[0_25px_80px_-18px_rgba(0,0,0,0.75)] md:shadow-[0_30px_100px_-20px_rgba(0,0,0,0.8)] border-2 border-gold/40 hover:border-gold/80 group transition-all duration-700">
-              {/* Animated border glow */}
+            {/* 3D tilt container */}
+            <motion.div
+              className="relative rounded-xl md:rounded-2xl overflow-hidden border-2 border-brand/30 group shadow-[0_30px_120px_-30px_hsl(var(--brand-blue)/0.45)]"
+              whileHover={{ rotateX: -6, rotateY: 10 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 220, damping: 20 }}
+              style={{ transformStyle: "preserve-3d" }}
+            >
+              {/* Layer 1: image */}
+              <motion.img
+                src={heroImage}
+                alt="Social media content creation and analytics dashboard"
+                className="w-full h-auto object-cover"
+                style={{ transform: "translateZ(20px)" }}
+              />
+
+              {/* Layer 2: brand gradient veil */}
               <motion.div
-                className="absolute inset-0 rounded-lg sm:rounded-xl md:rounded-2xl"
-                animate={{
-                  boxShadow: [
-                    "0 0 20px rgba(234, 179, 8, 0.3)",
-                    "0 0 40px rgba(234, 179, 8, 0.5)",
-                    "0 0 20px rgba(234, 179, 8, 0.3)"
-                  ]
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                aria-hidden="true"
+                className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--brand-blue)/0.25)] via-transparent to-[hsl(var(--gold)/0.25)]"
+                style={{ transform: "translateZ(30px)" }}
               />
-              
-              <motion.img 
-                src={heroImage} 
-                alt="Professional Virtual Assistant Team" 
-                className="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700"
-                whileHover={{ scale: 1.1 }}
-              />
-              
-              {/* Animated gradient overlays */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-gold/10 mix-blend-overlay" />
+
+              {/* Layer 3: concentric rings for depth */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-gold/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-                aria-hidden="true"
+                className="absolute -top-16 -left-16 w-64 h-64 rounded-full bg-gradient-to-br from-[hsl(var(--gold)/0.25)] to-[hsl(var(--brand-blue)/0.25)] blur-3xl"
+                style={{ transform: "translateZ(60px)" }}
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               />
-              
-              {/* Floating stats overlay */}
+              <motion.div
+                className="absolute -bottom-16 -right-16 w-72 h-72 rounded-full bg-gradient-to-tr from-[hsl(var(--brand-blue)/0.2)] to-[hsl(var(--gold)/0.2)] blur-3xl"
+                style={{ transform: "translateZ(40px)" }}
+                animate={{ scale: [1, 1.08, 1] }}
+                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+              />
+
+              {/* Layer 4: floating stats card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1 }}
-                className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 md:bottom-6 md:left-6 md:right-6 backdrop-blur-xl bg-card/95 border border-gold/20 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 shadow-2xl group-hover:border-gold/40 transition-colors duration-500"
+                className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 md:bottom-6 md:left-6 md:right-6 backdrop-blur-xl bg-card/95 border border-brand/30 rounded-xl p-4 sm:p-5 shadow-2xl"
+                style={{ transform: "translateZ(80px)" }}
               >
                 <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6">
                   <motion.div
@@ -197,15 +196,15 @@ export const Hero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 1.2, duration: 0.5 }}
                     whileHover={{ scale: 1.05 }}
-                    className="text-center group/stat cursor-default"
+                    className="text-center"
                   >
                     <motion.div
                       animate={{ y: [-3, 3, -3] }}
                       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                     >
-                      <Users className="w-4 h-4 sm:w-5 sm:h-5 mx-auto mb-1 text-gold/70 group-hover/stat:text-gold transition-colors" aria-hidden="true" />
-                      <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-gold to-yellow-400 bg-clip-text text-transparent">200+</div>
-                      <div className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground font-medium">Clients</div>
+                      <Users className="w-4 h-4 sm:w-5 sm:h-5 mx-auto mb-1 text-brand/80 group-hover/stat:text-brand transition-colors" aria-hidden="true" />
+                      <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">2M+</div>
+                      <div className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground font-medium">Followers Grown</div>
                     </motion.div>
                   </motion.div>
                   
@@ -214,15 +213,15 @@ export const Hero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 1.3, duration: 0.5 }}
                     whileHover={{ scale: 1.05 }}
-                    className="text-center group/stat cursor-default border-x border-border/50"
+                    className="text-center border-x border-border/50"
                   >
                     <motion.div
                       animate={{ y: [-3, 3, -3] }}
                       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
                     >
-                      <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 mx-auto mb-1 text-gold/70 group-hover/stat:text-gold transition-colors" aria-hidden="true" />
-                      <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-gold to-amber-400 bg-clip-text text-transparent">70%</div>
-                      <div className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground font-medium">Cost Saved</div>
+                      <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 mx-auto mb-1 text-brand/80 group-hover/stat:text-brand transition-colors" aria-hidden="true" />
+                      <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">4.2%</div>
+                      <div className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground font-medium">Avg Engagement</div>
                     </motion.div>
                   </motion.div>
                   
@@ -231,24 +230,24 @@ export const Hero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 1.4, duration: 0.5 }}
                     whileHover={{ scale: 1.05 }}
-                    className="text-center group/stat cursor-default"
+                    className="text-center"
                   >
                     <motion.div
                       animate={{ y: [-3, 3, -3] }}
                       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
                     >
-                      <Star className="w-4 h-4 sm:w-5 sm:h-5 mx-auto mb-1 text-gold/70 group-hover/stat:text-gold transition-colors fill-gold/20" aria-hidden="true" />
-                      <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-yellow-400 to-gold bg-clip-text text-transparent">4.9/5</div>
-                      <div className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground font-medium">Rating</div>
+                      <Star className="w-4 h-4 sm:w-5 sm:h-5 mx-auto mb-1 text-brand/80 group-hover/stat:text-brand transition-colors fill-[hsl(var(--brand-blue))/0.2]" aria-hidden="true" />
+                      <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">6+</div>
+                      <div className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground font-medium">Platforms</div>
                     </motion.div>
                   </motion.div>
                 </div>
               </motion.div>
-            </div>
+            </motion.div>
             
             {/* Animated decorative elements */}
             <motion.div 
-              className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gold/20 rounded-full blur-3xl"
+              className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-brand/20 rounded-full blur-3xl"
               animate={{
                 scale: [1, 1.3, 1],
                 opacity: [0.2, 0.5, 0.2]
@@ -261,7 +260,7 @@ export const Hero = () => {
               aria-hidden="true"
             />
             <motion.div 
-              className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-gold/10 rounded-full blur-3xl"
+              className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-brand/10 rounded-full blur-3xl"
               animate={{
                 scale: [1, 1.4, 1],
                 opacity: [0.1, 0.3, 0.1]
@@ -293,20 +292,6 @@ export const Hero = () => {
         </div>
       </div>
       
-      {/* Scroll indicator - hidden on mobile */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.2, repeat: Infinity, repeatType: "reverse" }}
-        className="hidden md:flex absolute bottom-8 md:bottom-10 left-1/2 transform -translate-x-1/2 text-gold"
-      >
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-xs md:text-sm">Scroll to explore</span>
-          <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div>
-      </motion.div>
     </motion.section>
   );
 };

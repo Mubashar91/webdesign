@@ -22,44 +22,47 @@ interface PricingPlan {
 const plans: PricingPlan[] = [
   {
     name: "Starter",
-    hours: "10h / week",
-    price: 369,
-    setupFee: 149,
+    hours: "1 Platform",
+    price: 497,
+    setupFee: 0,
     features: [
-      "Dedicated VA",
-      "Native Quality Control",
-      "24h Replacement Guarantee",
-      "Slack/Email Support",
-      "14 Days Money-Back Warranty"
+      "1 Social Platform (IG, TikTok, or LinkedIn)",
+      "3–4 Posts per Week",
+      "Content Creation & Scheduling",
+      "Community Management",
+      "Monthly Analytics Report"
     ],
     highlighted: false
   },
   {
-    name: "Professional",
-    hours: "20h / week",
-    price: 629,
+    name: "Growth",
+    hours: "2 Platforms",
+    price: 897,
     setupFee: 0,
+    badge: "Most Popular",
     features: [
-      "Everything in Starter",
-      "No Setup Fee",
-      "Priority Support",
-      "Bi-weekly Progress Reports",
-      "Flexible Hour Rollover"
+      "2 Social Platforms",
+      "4–5 Posts per Week per Platform",
+      "Advanced Content Strategy",
+      "Daily Community Engagement",
+      "Bi-Weekly Performance Reviews",
+      "Dedicated Account Manager"
     ],
     highlighted: true
   },
   {
-    name: "Enterprise",
-    hours: "40h / week",
-    price: 1169,
+    name: "Scale",
+    hours: "3+ Platforms",
+    price: 1497,
     setupFee: 0,
     badge: "Best Value",
     features: [
-      "Everything in Professional",
-      "No Setup Fee",
-      "Dedicated Account Manager",
+      "3+ Social Platforms",
+      "5–7 Posts per Week per Platform",
+      "Full-Service Content Production",
+      "Paid Social Campaigns (ad spend separate)",
       "Weekly Strategy Calls",
-      "Custom Workflow Integration"
+      "Priority Support & Custom Reporting"
     ],
     highlighted: false
   }
@@ -101,123 +104,19 @@ export const Pricing = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <motion.span 
-            className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gold text-foreground text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-md"
+            className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-foreground text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-md"
             whileHover={{ scale: 1.05 }}
           >
             Transparent Pricing
           </motion.span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-foreground leading-tight">
-            Simple, <span className="text-gold">Transparent</span> Pricing
+            Simple, <span className="text-gold">Scalable</span> Pricing
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Choose the plan that fits your needs. Scale up or down anytime. No hidden fees.
+            Choose the plan that fits your growth stage. Add platforms anytime. No hidden fees.
           </p>
         </motion.div>
 
-        {/* VA Count Selector */}
-        <motion.div 
-          className="max-w-xl mx-auto mb-8 sm:mb-10 md:mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <div className="text-center mb-3 sm:mb-4">
-            <label className="block text-base sm:text-lg lg:text-xl font-bold mb-2 text-foreground">
-              How many VAs do you need?
-            </label>
-            <span className="text-xs sm:text-sm text-muted-foreground px-2">
-              Select the number of virtual assistants for your team
-            </span>
-          </div>
-          
-          <div className="relative group">
-            {/* Hover gradient effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg sm:rounded-xl pointer-events-none" />
-            
-            {/* Glow effect on focus */}
-            <div className="absolute inset-0 rounded-lg sm:rounded-xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none blur-xl bg-gold/20" />
-            
-            <select 
-              value={vaCount}
-              onChange={(e) => setVaCount(Number(e.target.value))}
-              className="relative w-full p-3 sm:p-4 md:p-5 bg-card/90 backdrop-blur-sm border-2 border-border/50 hover:border-gold/70 focus:border-gold rounded-lg sm:rounded-xl text-center font-bold text-lg sm:text-xl lg:text-2xl focus:outline-none focus:ring-2 focus:ring-gold/20 transition-all duration-300 text-foreground appearance-none cursor-pointer shadow-md hover:shadow-lg hover:shadow-gold/10 active:scale-[0.98]"
-              style={{
-                backgroundImage: 'none'
-              }}
-              aria-label="Select number of virtual assistants"
-              aria-describedby="va-count-description"
-            >
-              {Array.from({ length: MAX_VA_COUNT }, (_, i) => i + 1).map(num => (
-                <option 
-                  key={num} 
-                  value={num} 
-                  className="text-foreground bg-card py-2 sm:py-3"
-                >
-                  {num} VA{num > 1 ? 's' : ''}
-                </option>
-              ))}
-            </select>
-            
-            {/* Custom dropdown arrow */}
-            <div className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gold/70 group-hover:text-gold transition-all duration-300 group-focus-within:rotate-180">
-              <svg 
-                width="24" 
-                height="24" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="3" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-                className="w-5 h-5 sm:w-6 sm:h-6"
-              >
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </div>
-          </div>
-
-          {/* Price per VA indicator */}
-          <motion.div 
-            className="mt-4 sm:mt-5 text-center"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-gold/10 text-foreground text-xs sm:text-sm font-semibold rounded-full border border-gold/30 shadow-sm">
-              Starting from €{avgPricePerVA}/month per VA • €{Math.round(avgPricePerVA / (avgHoursPerWeek * 4))}/hour
-            </span>
-          </motion.div>
-
-          {discount > 0 && (
-            <motion.div 
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              className="mt-4 sm:mt-5 p-2.5 sm:p-3 bg-gradient-to-r from-gold/20 via-gold/30 to-gold/20 backdrop-blur-sm border-2 border-gold/50 rounded-lg sm:rounded-xl text-center shadow-lg"
-              role="alert"
-              aria-live="polite"
-            >
-              <p className="text-gold font-bold text-xs sm:text-sm md:text-base flex items-center justify-center gap-1.5 sm:gap-2 flex-wrap">
-                <span className="text-base sm:text-lg" aria-hidden="true">🎉</span>
-                <span className="whitespace-nowrap">{Math.round(discount * 100)}% Bulk Discount Applied!</span>
-                <span className="whitespace-nowrap">You save €{savings}/month</span>
-              </p>
-            </motion.div>
-          )}
-          {vaCount >= 2 && vaCount < BULK_DISCOUNT_THRESHOLD && (
-            <motion.div 
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              className="mt-4 sm:mt-5 p-2.5 sm:p-3 bg-muted/50 backdrop-blur-sm border border-border rounded-lg sm:rounded-xl text-center"
-              role="status"
-            >
-              <p className="text-muted-foreground text-xs sm:text-sm flex items-center justify-center gap-1.5 flex-wrap">
-                <span>💡</span>
-                <span>Add {BULK_DISCOUNT_THRESHOLD - vaCount} more VA{BULK_DISCOUNT_THRESHOLD - vaCount > 1 ? 's' : ''} to unlock {Math.round(BULK_DISCOUNT_RATE * 100)}% discount</span>
-              </p>
-            </motion.div>
-          )}
-        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
@@ -233,7 +132,7 @@ export const Pricing = () => {
               {/* Animated gradient border for highlighted plan */}
               {plan.highlighted && (
                 <motion.div
-                  className="absolute -inset-0.5 bg-gradient-to-r from-gold via-yellow-400 to-amber-500 rounded-2xl"
+                  className="absolute -inset-0.5 bg-gradient-to-r from-brand via-brand to-brand rounded-2xl"
                   animate={{
                     backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
                   }}
@@ -248,13 +147,13 @@ export const Pricing = () => {
               
               <div className={`relative rounded-2xl p-6 sm:p-8 md:p-10 transition-all duration-500 group h-full ${
                 plan.highlighted 
-                  ? 'bg-gradient-to-br from-gold/95 via-gold/98 to-amber-500 text-foreground shadow-[0_25px_70px_-15px_hsl(45_75%_52%/0.5)]' 
-                  : 'bg-card border-2 border-border/60 hover:border-gold/80 hover:shadow-[0_25px_70px_-15px_hsl(45_75%_52%/0.4)]'
+                  ? 'bg-gradient-to-br from-[hsl(var(--brand-blue))] via-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] text-foreground shadow-[0_25px_70px_-15px_hsl(var(--brand-blue)/0.5)]' 
+                  : 'bg-card border-2 border-brand/30 hover:border-brand hover:shadow-[0_25px_70px_-15px_hsl(var(--brand-blue)/0.4)]'
               }`}>
                 {/* Top accent line with animation */}
                 <motion.div 
                   className={`absolute top-0 left-0 right-0 h-1 rounded-t-2xl ${
-                    plan.highlighted ? 'bg-foreground/20' : 'bg-gradient-to-r from-transparent via-gold to-transparent'
+                    plan.highlighted ? 'bg-foreground/20' : 'bg-gradient-to-r from-transparent via-brand to-transparent'
                   }`}
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
@@ -263,7 +162,7 @@ export const Pricing = () => {
               
                 {plan.badge && (
                   <motion.div 
-                    className="absolute -top-4 right-6 bg-gradient-to-r from-foreground to-foreground/95 text-gold px-4 py-1.5 rounded-full text-xs font-bold shadow-xl flex items-center gap-1.5 border border-gold/20"
+                    className="absolute -top-4 right-6 bg-gradient-to-r from-foreground to-foreground/95 text-brand px-4 py-1.5 rounded-full text-xs font-bold shadow-xl flex items-center gap-1.5 border border-brand/20"
                     initial={{ y: -10, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
@@ -293,7 +192,7 @@ export const Pricing = () => {
                       {plan.hours}
                     </p>
                     <span className={`px-2 py-0.5 text-xs rounded-full ${
-                      plan.highlighted ? 'bg-foreground/20 text-foreground' : 'bg-gold/10 text-gold'
+                      plan.highlighted ? 'bg-foreground/20 text-foreground' : 'bg-brand/10 text-brand'
                     }`}>
                       {parseInt(plan.hours)} hours
                     </span>
@@ -305,13 +204,13 @@ export const Pricing = () => {
                   <div className="flex items-baseline gap-1">
                     <motion.span 
                       className={`text-5xl sm:text-6xl font-bold tracking-tight ${
-                        plan.highlighted ? 'text-foreground' : 'text-gold'
+                        plan.highlighted ? 'text-foreground' : 'text-brand'
                       }`}
                       initial={{ scale: 0.5, opacity: 0 }}
                       whileInView={{ scale: 1, opacity: 1 }}
                       transition={{ type: "spring", duration: 0.8, delay: 0.4 }}
                     >
-                      €{Math.round(plan.price * (1 - discount) * vaCount)}
+                      €{plan.price}
                     </motion.span>
                     <span className={`text-base ml-1 ${
                       plan.highlighted ? 'text-foreground/60' : 'text-muted-foreground'
@@ -327,7 +226,7 @@ export const Pricing = () => {
                     </p>
                   ) : (
                     <p className={`text-xs mt-2 font-semibold flex items-center gap-1 ${
-                      plan.highlighted ? 'text-foreground' : 'text-gold'
+                      plan.highlighted ? 'text-foreground' : 'text-brand'
                     }`}>
                       <Check className="w-3.5 h-3.5" />
                       No setup fee
@@ -346,10 +245,10 @@ export const Pricing = () => {
                       transition={{ delay: 0.5 + fIndex * 0.1 }}
                     >
                       <div className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 transition-all duration-300 group-hover:scale-110 ${
-                        plan.highlighted ? 'bg-foreground/20' : 'bg-gold/10 group-hover:bg-gold/20'
+                        plan.highlighted ? 'bg-foreground/20' : 'bg-brand/10 group-hover:bg-brand/20'
                       }`}>
                         <Check className={`w-3 h-3 ${
-                          plan.highlighted ? 'text-foreground' : 'text-gold'
+                          plan.highlighted ? 'text-foreground' : 'text-brand'
                         }`} />
                       </div>
                       <span className={`text-sm leading-relaxed ${
@@ -368,8 +267,8 @@ export const Pricing = () => {
                   onClick={() => window.location.href = '/book-meeting'}
                   className={`w-full relative z-10 font-bold text-base py-6 sm:py-7 rounded-xl transition-all duration-300 group/btn overflow-hidden min-h-[44px] ${
                     plan.highlighted 
-                      ? 'bg-foreground text-gold hover:bg-foreground/95 shadow-lg hover:shadow-xl hover:scale-105' 
-                      : 'border-2 border-gold text-gold hover:bg-gold hover:text-foreground hover:scale-105'
+                      ? 'bg-foreground text-brand hover:bg-foreground/95 shadow-lg hover:shadow-xl hover:scale-105' 
+                      : 'border-2 border-brand text-brand hover:bg-brand hover:text-foreground hover:scale-105'
                   }`}
                   aria-label={`Get started with ${plan.name} plan - ${plan.hours} per week at €${Math.round(plan.price * (1 - discount) * vaCount)} per month`}
                 >
@@ -389,7 +288,7 @@ export const Pricing = () => {
     viewport={{ once: true }}
     transition={{ duration: 0.6, delay: 0.5 }}
   >
-    All plans include full confidentiality agreements, secure data handling, and are billed monthly with no long-term contracts. Scale up or down anytime.
+    All plans are billed monthly with no long-term contracts. Add or remove platforms anytime. Paid social ad spend is separate and billed directly by the platform.
         </motion.p>
       </div>
     </motion.section>

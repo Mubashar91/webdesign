@@ -4,27 +4,27 @@ import { motion } from "framer-motion";
 const services = [
   {
     icon: Instagram,
-    title: "Social Media Management",
-    description: "Content creation, scheduling, and engagement management across all platforms",
-    benefit: "3-5x increase in engagement rates"
+    title: "Content & Creatives",
+    description: "High-quality posts, carousels, reels and stories tailored to your brand voice",
+    benefit: "3–5x engagement lift"
   },
   {
     icon: HeadphonesIcon,
-    title: "Customer Support",
-    description: "Email, chat, and phone support with native language proficiency",
-    benefit: "95%+ customer satisfaction scores"
+    title: "Community Management",
+    description: "Daily moderation, comment replies, DMs and proactive audience engagement",
+    benefit: "+30% response rate"
   },
   {
     icon: FolderKanban,
-    title: "Back-Office & Admin",
-    description: "Data entry, email management, calendar coordination, and document processing",
-    benefit: "Save 20+ hours per week"
+    title: "Publishing & Scheduling",
+    description: "Cross-platform scheduling, calendar planning and asset workflows",
+    benefit: "Saved 20+ hrs/month"
   },
   {
     icon: TrendingUp,
-    title: "SEO & Content",
-    description: "Blog writing, keyword research, on-page optimization, and link building",
-    benefit: "2x organic traffic growth"
+    title: "Paid Social & Analytics",
+    description: "Ad setup, A/B testing and performance reporting with actionable insights",
+    benefit: "2–4x ROAS potential"
   }
 ];
 
@@ -49,7 +49,7 @@ export const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gold text-foreground text-xs sm:text-sm md:text-base font-semibold rounded-full mb-3 sm:mb-4">
+          <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-foreground text-xs sm:text-sm md:text-base font-semibold rounded-full mb-3 sm:mb-4">
             Our Core Services
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-5 px-2">
@@ -64,7 +64,7 @@ export const Services = () => {
           {services.map((service, index) => (
             <motion.div 
               key={index}
-              className="relative bg-card/50 backdrop-blur-sm border-2 border-border p-5 sm:p-6 md:p-7 lg:p-9 xl:p-10 rounded-xl sm:rounded-2xl hover:bg-card hover:border-gold/50 hover:shadow-[0_25px_80px_-20px_hsl(45_80%_55%/0.4)] transition-all duration-700 group overflow-hidden"
+              className="relative bg-card/50 backdrop-blur-sm border-2 border-brand/30 p-5 sm:p-6 md:p-7 lg:p-9 xl:p-10 rounded-xl sm:rounded-2xl hover:bg-card hover:border-brand hover:shadow-[0_25px_80px_-20px_hsl(var(--brand-blue)/0.4)] transition-all duration-700 group overflow-hidden"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
@@ -72,24 +72,24 @@ export const Services = () => {
               whileHover={{ y: -12, scale: 1.02 }}
             >
               {/* Hover gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--gold)/0.1)] via-[hsl(var(--brand-blue)/0.08)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               
               <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row items-start gap-4 sm:gap-5 md:gap-5 lg:gap-6 relative z-10">
                 <motion.div 
-                  className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-lg sm:rounded-xl bg-gold text-foreground flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-[0_10px_30px_-10px_hsl(45_80%_55%/0.5)]"
+                  className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white ring-1 ring-brand/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-[0_18px_40px_-12px_hsl(var(--brand-blue)/0.6)]"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
                   <service.icon className="w-7 h-7 sm:w-8 sm:h-8 md:w-7 md:h-7 lg:w-8 lg:h-8" />
                 </motion.div>
                 <div className="flex-1 w-full">
-                  <h3 className="text-xl sm:text-2xl md:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 md:mb-3 text-foreground group-hover:text-gold transition-colors duration-300">
+                  <h3 className="text-xl sm:text-2xl md:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 md:mb-3 text-foreground group-hover:text-brand transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="text-sm sm:text-base md:text-sm lg:text-base text-muted-foreground mb-3 sm:mb-4 md:mb-4 leading-relaxed">
                     {service.description}
                   </p>
-                  <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 md:px-3.5 md:py-1.5 lg:px-4 lg:py-2 bg-gold/10 border border-gold/30 rounded-full text-gold text-xs sm:text-sm md:text-xs lg:text-sm font-semibold group-hover:bg-gold group-hover:text-foreground group-hover:border-gold transition-all duration-500">
+                  <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 md:px-3.5 md:py-1.5 lg:px-4 lg:py-2 bg-brand/10 border border-brand/30 rounded-full text-brand text-xs sm:text-sm md:text-xs lg:text-sm font-semibold group-hover:bg-brand group-hover:text-foreground group-hover:border-brand transition-all duration-500">
                     <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 mr-1.5 sm:mr-2 md:mr-1.5 lg:mr-2" />
                     <span className="leading-none">{service.benefit}</span>
                   </div>
@@ -97,8 +97,8 @@ export const Services = () => {
               </div>
               
               {/* Decorative corner accent */}
-              <div className="absolute top-0 right-0 w-12 h-12 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20 border-t-2 border-r-2 border-gold/0 group-hover:border-gold/50 rounded-tr-xl sm:rounded-tr-2xl transition-all duration-700" />
-              <div className="absolute bottom-0 left-0 w-12 h-12 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20 border-b-2 border-l-2 border-gold/0 group-hover:border-gold/50 rounded-bl-xl sm:rounded-bl-2xl transition-all duration-700" />
+              <div className="absolute top-0 right-0 w-12 h-12 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20 border-t-2 border-r-2 border-brand/0 group-hover:border-brand/50 rounded-tr-xl sm:rounded-tr-2xl transition-all duration-700" />
+              <div className="absolute bottom-0 left-0 w-12 h-12 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20 border-b-2 border-l-2 border-brand/0 group-hover:border-brand/50 rounded-bl-xl sm:rounded-bl-2xl transition-all duration-700" />
             </motion.div>
           ))}
         </div>

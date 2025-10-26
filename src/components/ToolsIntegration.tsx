@@ -1,27 +1,27 @@
 import { motion } from "framer-motion";
 
 const tools = [
-  { name: "Slack", category: "Communication" },
-  { name: "Trello", category: "Project Management" },
-  { name: "Asana", category: "Project Management" },
-  { name: "Google Workspace", category: "Productivity" },
-  { name: "Microsoft 365", category: "Productivity" },
+  { name: "Instagram", category: "Platform" },
+  { name: "TikTok", category: "Platform" },
+  { name: "LinkedIn", category: "Platform" },
+  { name: "Facebook", category: "Platform" },
+  { name: "X (Twitter)", category: "Platform" },
+  { name: "YouTube", category: "Platform" },
   { name: "Canva", category: "Design" },
   { name: "Adobe Suite", category: "Design" },
-  { name: "HubSpot", category: "CRM" },
-  { name: "Salesforce", category: "CRM" },
-  { name: "Zendesk", category: "Support" },
-  { name: "Intercom", category: "Support" },
-  { name: "Monday.com", category: "Project Management" },
-  { name: "ClickUp", category: "Project Management" },
-  { name: "WordPress", category: "CMS" },
-  { name: "Shopify", category: "E-commerce" },
-  { name: "Mailchimp", category: "Marketing" },
-  { name: "SEMrush", category: "SEO" },
-  { name: "Hootsuite", category: "Social Media" }
+  { name: "Figma", category: "Design" },
+  { name: "CapCut", category: "Video Editing" },
+  { name: "Premiere Pro", category: "Video Editing" },
+  { name: "Final Cut Pro", category: "Video Editing" },
+  { name: "Hootsuite", category: "Scheduling" },
+  { name: "Buffer", category: "Scheduling" },
+  { name: "Later", category: "Scheduling" },
+  { name: "Sprout Social", category: "Analytics" },
+  { name: "Google Analytics", category: "Analytics" },
+  { name: "Meta Business Suite", category: "Analytics" }
 ];
 
-const categories = ["Communication", "Project Management", "Productivity", "Design", "CRM", "Support", "CMS", "E-commerce", "Marketing", "SEO", "Social Media"];
+const categories = ["Platform", "Design", "Video Editing", "Scheduling", "Analytics"];
 
 export const ToolsIntegration = () => {
   return (
@@ -41,10 +41,10 @@ export const ToolsIntegration = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-2">
-            Works With Your <span className="text-gold">Existing Tools</span>
+            We Work With <span className="text-gold">All Major Platforms</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl px-2">
-            Our VAs are trained on 50+ platforms. No need to change your workflow—we adapt to yours.
+            From content creation to analytics—we're fluent in the tools that power modern social media.
           </p>
         </motion.div>
 
@@ -83,10 +83,10 @@ export const ToolsIntegration = () => {
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           >
             <p className="text-base sm:text-lg text-foreground mb-3 sm:mb-4">
-              <span className="font-bold text-gold">Need a specific tool?</span> Just ask. 
+              <span className="font-bold text-gold">Using a different platform or tool?</span> We adapt. 
             </p>
             <p className="text-sm sm:text-base text-muted-foreground">
-              Our VAs receive ongoing training on new platforms monthly. If you use it, we can work with it.
+              Our team stays current with emerging platforms and tools. If it's part of your stack, we'll master it.
             </p>
           </motion.div>
         </div>

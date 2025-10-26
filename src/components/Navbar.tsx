@@ -71,7 +71,7 @@ export const Navbar = () => {
             className="flex items-center space-x-2 sm:space-x-3"
           >
             <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-gold rounded-lg flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110">
-              <span className="text-black font-bold text-base sm:text-lg md:text-lg lg:text-xl">L</span>
+              <span className="text-foreground font-bold text-base sm:text-lg md:text-lg lg:text-xl">L</span>
             </div>
             <span className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-foreground hover:text-gold transition-colors duration-300">LuxVA</span>
           </motion.div>
