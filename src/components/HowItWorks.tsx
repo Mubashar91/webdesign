@@ -1,30 +1,30 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { Calendar, UserCheck, Rocket, LineChart } from "lucide-react";
+import { Search, FileText, Settings, TrendingUp } from "lucide-react";
 
 const steps = [
   {
-    icon: Calendar,
+    icon: Search,
     step: "Step 1",
-    title: "Strategy Call",
-    description: "We align on goals, audience, platforms and voice. Clear content pillars and KPIs for growth."
+    title: "SEO Audit & Strategy",
+    description: "Comprehensive website analysis, keyword research, and competitor analysis. We create a custom SEO roadmap for your business."
   },
   {
-    icon: UserCheck,
+    icon: FileText,
     step: "Step 2",
-    title: "Creatives & Copy",
-    description: "We produce posts, carousels, reels and captions tailored to your brand. You approve, we refine."
+    title: "Content & On-Page SEO",
+    description: "Optimize existing content and create new SEO-focused content. Meta tags, headers, and internal linking strategy."
   },
   {
-    icon: Rocket,
+    icon: Settings,
     step: "Step 3",
-    title: "Publishing & Community",
-    description: "Scheduling across channels, daily comments/DMs, and proactive engagement to build loyalty."
+    title: "Technical Implementation",
+    description: "Site speed optimization, mobile responsiveness, schema markup, and technical SEO fixes for better crawlability."
   },
   {
-    icon: LineChart,
+    icon: TrendingUp,
     step: "Step 4",
-    title: "Analytics & Optimization",
-    description: "Monthly reporting, experiments and paid boosts to scale what works and cut what doesn’t."
+    title: "Monitor & Scale",
+    description: "Track rankings, analyze traffic growth, and continuously optimize. Monthly reports and strategy adjustments."
   }
 ];
 
@@ -48,13 +48,13 @@ export const HowItWorks = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <span className="inline-block px-4 py-2 bg-foreground text-gold text-sm font-semibold rounded-full mb-4">
-            SMM in 4 Steps
+            SEO in 4 Steps
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
             How It <span className="text-gold">Works</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            From first call to fully operational in less than a week. Simple, transparent, and fast.
+            From audit to ranking improvements in 30-90 days. Proven process, measurable results.
           </p>
         </motion.div>
 
@@ -121,7 +121,7 @@ export const HowItWorks = () => {
             transition={{ duration: prefersReducedMotion ? 0.3 : 0.5 }}
           >
             <a href="#contact" className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-foreground text-background hover:bg-gold hover:text-foreground transition-colors duration-300 font-semibold ring-1 ring-foreground/20">
-              Book strategy call
+              Book SEO audit
             </a>
           </motion.div>
         </div>

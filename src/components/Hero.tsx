@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Calendar, Sparkles, TrendingUp, Users, Star, Award } from "lucide-react";
+import { ArrowRight, Calendar, Sparkles, TrendingUp, Search, BarChart3, Award } from "lucide-react";
 
 export const Hero = () => {
   const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"]
@@ -12,6 +14,7 @@ export const Hero = () => {
   
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0]);
+  const springY = useSpring(y, { stiffness: 100, damping: 30 });
 
   return (
     <motion.section 
@@ -28,25 +31,49 @@ export const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-4 py-8 sm:py-12 md:py-16 lg:py-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.6, -0.05, 0.01, 0.99] }}
+            initial={{ opacity: 0, y: 60 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
+            transition={{ 
+              duration: 1, 
+              delay: 0.2, 
+              ease: [0.25, 0.46, 0.45, 0.94],
+              type: "spring",
+              stiffness: 100
+            }}
           >
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="inline-block mb-3 sm:mb-4 md:mb-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-gold/10 border border-gold/30 rounded-full text-gold text-xs sm:text-sm font-semibold"
+              initial={{ opacity: 0, scale: 0.8, y: 20 }}
+              animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.8, y: 20 }}
+              transition={{ 
+                duration: 0.8, 
+                delay: 0.4,
+                type: "spring",
+                stiffness: 120,
+                damping: 20
+              }}
+              className="inline-block mb-3 sm:mb-4 md:mb-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-gold/10 border border-gold/30 rounded-full text-gold text-xs sm:text-sm font-semibold hover:bg-gold/20 hover:scale-105 transition-all duration-300 cursor-default"
             >
-              Trusted by 200+ Growing Brands
+              <motion.span
+                animate={{ 
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] 
+                }}
+                transition={{ 
+                  duration: 3, 
+                  repeat: Infinity, 
+                  ease: "linear" 
+                }}
+                className="bg-gradient-to-r from-gold via-brand-blue to-gold bg-[length:200%_100%] bg-clip-text text-transparent"
+              >
+                Trusted by 500+ Businesses Worldwide
+              </motion.span>
             </motion.div>
             
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-5 md:mb-6 leading-[1.15] sm:leading-[1.12] md:leading-[1.1]">
-              Grow Your Brand on <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">Instagram, TikTok & LinkedIn</span>
+              Dominate Search Results & <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">Drive Organic Traffic</span>
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-3 sm:mb-4 md:mb-5 leading-relaxed max-w-xl">
-              Full-service social media management: content, community, analytics — all handled for you.
+              Complete SEO solutions: keyword research, on-page optimization, content strategy, and technical SEO — all designed to boost your rankings.
             </p>
             
             <motion.div
@@ -60,7 +87,7 @@ export const Hero = () => {
                 size="lg"
                 onClick={() => window.location.href = '/book-meeting'}
                 className="group relative w-full sm:w-auto text-sm sm:text-base md:text-lg px-8 sm:px-10 md:px-12 py-5 sm:py-6 md:py-7 h-auto font-bold shadow-gold-lg transform hover:scale-[1.06] hover:-translate-y-2 transition-all duration-400 hover:brightness-110 cursor-pointer overflow-hidden rounded-xl border-2 border-transparent hover:border-yellow-400/30"
-                aria-label="Book a free 15-minute SMM strategy call"
+                aria-label="Book a free 15-minute SEO strategy call"
               >
                 {/* Subtle shimmer effect */}
                 <motion.div
@@ -83,8 +110,8 @@ export const Hero = () => {
                 
                 <span className="relative z-10 flex items-center justify-center gap-2.5">
                   <Calendar className="w-5 h-5 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" aria-hidden="true" />
-                  <span className="hidden sm:inline font-semibold group-hover:tracking-wide transition-all duration-300">Book Free Strategy Call (15 min)</span>
-                  <span className="sm:hidden font-semibold group-hover:tracking-wide transition-all duration-300">Book Strategy Call</span>
+                  <span className="hidden sm:inline font-semibold group-hover:tracking-wide transition-all duration-300">Book Free SEO Audit (15 min)</span>
+                  <span className="sm:hidden font-semibold group-hover:tracking-wide transition-all duration-300">Book SEO Audit</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" aria-hidden="true" />
                 </span>
               </Button>
@@ -109,7 +136,7 @@ export const Hero = () => {
                 >
                   <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-gold" aria-hidden="true" />
                 </motion.div>
-                <span className="font-medium">Limited slots available this week</span>
+                <span className="font-medium">Free comprehensive SEO audit included</span>
               </motion.div>
             </motion.div>
           </motion.div>
@@ -155,8 +182,8 @@ export const Hero = () => {
             >
               {/* Layer 1: image */}
               <motion.img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
-                alt="Social media analytics dashboard with charts and metrics"
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+                alt="SEO analytics dashboard with search rankings and traffic metrics"
                 className="w-full h-auto object-cover"
                 style={{ transform: "translateZ(20px)" }}
               />
@@ -201,9 +228,9 @@ export const Hero = () => {
                       animate={{ y: [-3, 3, -3] }}
                       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                     >
-                      <Users className="w-4 h-4 sm:w-5 sm:h-5 mx-auto mb-1 text-brand/80 group-hover/stat:text-brand transition-colors" aria-hidden="true" />
-                      <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">2M+</div>
-                      <div className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground font-medium">Followers Grown</div>
+                      <Search className="w-4 h-4 sm:w-5 sm:h-5 mx-auto mb-1 text-brand/80 group-hover/stat:text-brand transition-colors" aria-hidden="true" />
+                      <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">1M+</div>
+                      <div className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground font-medium">Keywords Ranked</div>
                     </motion.div>
                   </motion.div>
                   
@@ -219,8 +246,8 @@ export const Hero = () => {
                       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
                     >
                       <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 mx-auto mb-1 text-brand/80 group-hover/stat:text-brand transition-colors" aria-hidden="true" />
-                      <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">4.2%</div>
-                      <div className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground font-medium">Avg Engagement</div>
+                      <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">350%</div>
+                      <div className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground font-medium">Avg Traffic Boost</div>
                     </motion.div>
                   </motion.div>
                   
@@ -235,9 +262,9 @@ export const Hero = () => {
                       animate={{ y: [-3, 3, -3] }}
                       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
                     >
-                      <Star className="w-4 h-4 sm:w-5 sm:h-5 mx-auto mb-1 text-brand/80 group-hover/stat:text-brand transition-colors fill-[hsl(var(--brand-blue))/0.2]" aria-hidden="true" />
-                      <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">6+</div>
-                      <div className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground font-medium">Platforms</div>
+                      <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5 mx-auto mb-1 text-brand/80 group-hover/stat:text-brand transition-colors" aria-hidden="true" />
+                      <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">#1</div>
+                      <div className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground font-medium">Page Rankings</div>
                     </motion.div>
                   </motion.div>
                 </div>

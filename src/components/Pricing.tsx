@@ -21,48 +21,51 @@ interface PricingPlan {
 
 const plans: PricingPlan[] = [
   {
-    name: "Starter",
-    hours: "1 Platform",
-    price: 497,
+    name: "Essential",
+    hours: "Basic SEO",
+    price: 997,
     setupFee: 0,
     features: [
-      "1 Social Platform (IG, TikTok, or LinkedIn)",
-      "3–4 Posts per Week",
-      "Content Creation & Scheduling",
-      "Community Management",
-      "Monthly Analytics Report"
+      "SEO Audit & Strategy",
+      "Keyword Research (50 keywords)",
+      "On-Page Optimization (10 pages)",
+      "Technical SEO Fixes",
+      "Monthly Reporting",
+      "Email Support"
     ],
     highlighted: false
   },
   {
-    name: "Growth",
-    hours: "2 Platforms",
-    price: 897,
+    name: "Professional",
+    hours: "Complete SEO",
+    price: 1997,
     setupFee: 0,
     badge: "Most Popular",
     features: [
-      "2 Social Platforms",
-      "4–5 Posts per Week per Platform",
-      "Advanced Content Strategy",
-      "Daily Community Engagement",
-      "Bi-Weekly Performance Reviews",
-      "Dedicated Account Manager"
+      "Everything in Essential",
+      "Content Creation (4 blog posts/month)",
+      "Link Building Campaign",
+      "Local SEO Optimization",
+      "Competitor Analysis",
+      "Bi-weekly Strategy Calls",
+      "Priority Support"
     ],
     highlighted: true
   },
   {
-    name: "Scale",
-    hours: "3+ Platforms",
-    price: 1497,
+    name: "Enterprise",
+    hours: "Full-Service SEO",
+    price: 3997,
     setupFee: 0,
     badge: "Best Value",
     features: [
-      "3+ Social Platforms",
-      "5–7 Posts per Week per Platform",
-      "Full-Service Content Production",
-      "Paid Social Campaigns (ad spend separate)",
+      "Everything in Professional",
+      "Advanced Technical SEO",
+      "Content Marketing Strategy",
+      "E-commerce SEO (if applicable)",
       "Weekly Strategy Calls",
-      "Priority Support & Custom Reporting"
+      "Dedicated Account Manager",
+      "Custom Reporting Dashboard"
     ],
     highlighted: false
   }
@@ -110,10 +113,10 @@ export const Pricing = () => {
             Transparent Pricing
           </motion.span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-foreground leading-tight">
-            Simple, <span className="text-gold">Scalable</span> Pricing
+            Simple, <span className="text-gold">Results-Driven</span> Pricing
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Choose the plan that fits your growth stage. Add platforms anytime. No hidden fees.
+            Choose the SEO package that fits your business goals. Scale up anytime. No hidden fees.
           </p>
         </motion.div>
 
@@ -194,7 +197,7 @@ export const Pricing = () => {
                     <span className={`px-2 py-0.5 text-xs rounded-full ${
                       plan.highlighted ? 'bg-foreground/20 text-foreground' : 'bg-brand/10 text-brand'
                     }`}>
-                      {parseInt(plan.hours)} hours
+                      SEO Package
                     </span>
                   </div>
                 </div>
@@ -288,7 +291,7 @@ export const Pricing = () => {
     viewport={{ once: true }}
     transition={{ duration: 0.6, delay: 0.5 }}
   >
-    All plans are billed monthly with no long-term contracts. Add or remove platforms anytime. Paid social ad spend is separate and billed directly by the platform.
+    All plans are billed monthly with no long-term contracts. Upgrade or downgrade anytime. Results typically seen within 3-6 months.
         </motion.p>
       </div>
     </motion.section>

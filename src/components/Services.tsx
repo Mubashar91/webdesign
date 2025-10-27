@@ -1,54 +1,63 @@
-import { Lightbulb, Video, MessageCircle, BarChart3, Target, Users, TrendingUp } from "lucide-react";
-import { motion } from "framer-motion";
+import { Search, FileText, Settings, BarChart3, Target, Link, TrendingUp } from "lucide-react";
+import { motion, useInView, useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const services = [
   {
-    icon: Lightbulb,
-    title: "Strategy & Planning",
-    description: "Content pillars, competitor analysis, platform selection, and 90-day growth roadmaps tailored to your business goals",
-    benefit: "Clear direction from day 1"
+    icon: Search,
+    title: "Keyword Research & Strategy",
+    description: "Comprehensive keyword analysis, search intent mapping, competitor research, and strategic roadmaps to dominate your niche",
+    benefit: "Target high-value keywords"
   },
   {
-    icon: Video,
-    title: "Content Creation",
-    description: "Reels, carousels, graphics, captions, and video editing—all designed to stop the scroll and drive engagement",
-    benefit: "3–5x engagement lift"
+    icon: FileText,
+    title: "Content Optimization",
+    description: "SEO-optimized content creation, blog writing, meta descriptions, and content audits designed to rank and convert",
+    benefit: "3–5x organic traffic"
   },
   {
-    icon: MessageCircle,
-    title: "Community Management",
-    description: "Daily comment replies, DM handling, proactive engagement, and building loyal fans who advocate for your brand",
-    benefit: "+40% response rate"
+    icon: Settings,
+    title: "Technical SEO",
+    description: "Site speed optimization, mobile responsiveness, schema markup, and technical audits to improve crawlability",
+    benefit: "Faster indexing & ranking"
   },
   {
     icon: BarChart3,
-    title: "Analytics & Reporting",
-    description: "Monthly performance reports, A/B testing insights, and data-driven recommendations to optimize your strategy",
-    benefit: "Track what matters"
+    title: "SEO Analytics & Reporting",
+    description: "Monthly ranking reports, traffic analysis, conversion tracking, and data-driven recommendations for continuous growth",
+    benefit: "Track ranking progress"
   },
   {
     icon: Target,
-    title: "Paid Social Advertising",
-    description: "Campaign setup, audience targeting, ad creative, and budget optimization across Meta, TikTok, and LinkedIn Ads",
-    benefit: "2–4x ROAS potential"
+    title: "Local SEO",
+    description: "Google My Business optimization, local citations, review management, and geo-targeted strategies for local dominance",
+    benefit: "Dominate local search"
   },
   {
-    icon: Users,
-    title: "Influencer Partnerships",
-    description: "Identify, negotiate, and manage creator collaborations to amplify your reach and build authentic social proof",
-    benefit: "Expand your audience"
+    icon: Link,
+    title: "Link Building",
+    description: "High-quality backlink acquisition, outreach campaigns, and authority building to boost your domain strength",
+    benefit: "Increase domain authority"
   }
 ];
 
 export const Services = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+
   return (
     <motion.section 
+      ref={ref}
       id="services"
       className="relative py-8 sm:py-10 md:py-14 lg:py-16 bg-background text-foreground z-30 overflow-hidden min-h-[500px]"
       initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.05 }}
-      transition={{ duration: 1.2, ease: [0.6, -0.05, 0.01, 0.99] }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ 
+        duration: 1.2, 
+        ease: [0.25, 0.46, 0.45, 0.94],
+        type: "spring",
+        stiffness: 80
+      }}
     >
       {/* Animated background elements */}
       <div className="absolute top-10 right-5 w-64 h-64 sm:top-16 sm:right-8 sm:w-80 sm:h-80 md:top-20 md:right-10 md:w-96 md:h-96 bg-gold/5 rounded-full blur-[100px] md:blur-[120px]" />
@@ -62,13 +71,13 @@ export const Services = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-foreground text-xs sm:text-sm md:text-base font-semibold rounded-full mb-3 sm:mb-4">
-            Our Core Services
+            Our SEO Services
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-5 px-2">
-            What We <span className="text-gold">Handle</span> For You
+            How We <span className="text-gold">Boost</span> Your Rankings
           </h2>
           <p className="text-base sm:text-lg md:text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed px-2">
-            End-to-end social media management — from strategy to execution, we handle it all so you can focus on your business.
+            Complete SEO solutions — from keyword research to technical optimization, we handle everything to get you ranking higher.
           </p>
         </motion.div>
 
@@ -77,11 +86,26 @@ export const Services = () => {
             <motion.div 
               key={index}
               className="relative bg-card/50 backdrop-blur-sm border-2 border-brand/30 p-5 sm:p-6 md:p-7 lg:p-9 xl:p-10 rounded-xl sm:rounded-2xl hover:bg-card hover:border-brand hover:shadow-[0_25px_80px_-20px_hsl(var(--brand-blue)/0.4)] transition-all duration-700 group overflow-hidden"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.8, delay: index * 0.2, ease: [0.6, -0.05, 0.01, 0.99] }}
-              whileHover={{ y: -12, scale: 1.02 }}
+              initial={{ opacity: 0, y: 60, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 60, scale: 0.9 }}
+              transition={{ 
+                duration: 0.8, 
+                delay: index * 0.15, 
+                ease: [0.25, 0.46, 0.45, 0.94],
+                type: "spring",
+                stiffness: 100,
+                damping: 20
+              }}
+              whileHover={{ 
+                y: -15, 
+                scale: 1.03,
+                rotateY: 5,
+                transition: { 
+                  type: "spring", 
+                  stiffness: 300, 
+                  damping: 20 
+                }
+              }}
             >
               {/* Hover gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--gold)/0.1)] via-[hsl(var(--brand-blue)/0.08)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />

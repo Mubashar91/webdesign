@@ -19,128 +19,128 @@ interface CaseStudy {
   testimonialRole: string;
   image: string;
   stats: {
-    costSaved: string;
+    mainResult: string;
     timeframe: string;
-    vaCount: string;
+    seoFocus: string;
   };
 }
 
 const caseStudies: CaseStudy[] = [
   {
     id: 1,
-    title: "E‑commerce Brand Doubles Engagement and Lifts ROAS with Reels‑first Strategy",
-    company: "TechMart GmbH",
-    industry: "E‑commerce",
-    challenge: "Paid ads were plateauing and organic reach was declining. Creative fatigue and irregular posting hurt performance across Instagram and TikTok.",
-    solution: "We built a Reels‑first content system: 12 monthly short‑form videos, weekly carousels, story polls, and UGC integration. Paid social used creative testing and audience exclusions.",
+    title: "E-commerce Store Achieves 400% Organic Traffic Growth with Technical SEO Overhaul",
+    company: "TechMart Online",
+    industry: "E-commerce",
+    challenge: "Poor site performance, technical issues, and low search visibility. Organic traffic was declining while competitors dominated search results.",
+    solution: "Comprehensive technical SEO audit, site speed optimization, mobile responsiveness improvements, schema markup implementation, and strategic keyword targeting.",
     results: [
       {
-        metric: "Engagement Rate",
-        value: "+118%",
-        description: "Average ER rose from 2.1% to 4.6% in 90 days"
+        metric: "Organic Traffic",
+        value: "+400%",
+        description: "Massive increase in organic sessions within 6 months"
       },
       {
-        metric: "Followers",
-        value: "+32K",
-        description: "Net new followers across IG + TikTok"
+        metric: "Keyword Rankings",
+        value: "250+",
+        description: "Keywords ranking in top 10 positions"
       },
       {
-        metric: "ROAS",
-        value: "4.2x",
-        description: "After creative testing and budget reallocation"
+        metric: "Revenue",
+        value: "+280%",
+        description: "Organic revenue growth from improved rankings"
       },
       {
-        metric: "CPM",
-        value: "−28%",
-        description: "Lowered cost to reach qualified audiences"
+        metric: "Page Speed",
+        value: "+85%",
+        description: "Improvement in Core Web Vitals scores"
       }
     ],
-    testimonial: "Our social finally performs. Reels + creative testing turned things around fast—stronger engagement and profitable spend.",
+    testimonial: "Our organic traffic exploded after the technical SEO improvements. We're now ranking for keywords we never thought possible.",
     testimonialAuthor: "Stefan Richter",
-    testimonialRole: "CEO, TechMart GmbH",
+    testimonialRole: "CEO, TechMart Online",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop",
     stats: {
-      costSaved: "4.2x ROAS",
-      timeframe: "90 days",
-      vaCount: "IG + TikTok + Meta Ads"
+      mainResult: "+400% Traffic",
+      timeframe: "6 months",
+      seoFocus: "Technical SEO"
     }
   },
   {
     id: 2,
-    title: "Local Restaurant Group Grows Reservations with UGC + Geo‑targeted Ads",
+    title: "Local Business Dominates Local Search with Strategic Local SEO Campaign",
     company: "Digital Dynamics",
-    industry: "Hospitality",
-    challenge: "Low weekday footfall and poor attribution from social. Limited content variety and sparse community engagement.",
-    solution: "Launched UGC program, influencer seeding, story highlights for menus, and geo‑targeted offers. Rolled out weekly reels and boosted top performers.",
+    industry: "Professional Services",
+    challenge: "Invisible in local search results, poor Google My Business presence, and losing customers to competitors with better online visibility.",
+    solution: "Local SEO optimization, Google My Business enhancement, local citation building, review management, and location-based content strategy.",
     results: [
       {
-        metric: "Reservations",
-        value: "+63%",
-        description: "Weekday bookings in 8 weeks"
+        metric: "Local Rankings",
+        value: "#1 Position",
+        description: "Top ranking for primary local keywords"
       },
       {
-        metric: "CPL",
-        value: "−41%",
-        description: "Lower cost per reservation lead"
+        metric: "GMB Views",
+        value: "+320%",
+        description: "Increase in Google My Business profile views"
+      },
+      {
+        metric: "Phone Calls",
+        value: "+180%",
+        description: "More direct calls from search results"
       },
       {
         metric: "Reviews",
-        value: "+1.2k",
-        description: "More Google/IG reviews via community prompts"
-      },
-      {
-        metric: "Reach",
-        value: "+220%",
-        description: "Across IG + TikTok near locations"
+        value: "+150%",
+        description: "Increase in positive Google reviews"
       }
     ],
-    testimonial: "UGC and local ads worked. We saw sustained weekday growth and better reviews—exactly what we needed.",
+    testimonial: "We now dominate local search. Our phone rings constantly with qualified leads from Google searches.",
     testimonialAuthor: "Julia Becker",
     testimonialRole: "Founder, Digital Dynamics",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop",
     stats: {
-      costSaved: "+63% reservations",
-      timeframe: "8 weeks",
-      vaCount: "UGC + IG + TikTok + Ads"
+      mainResult: "#1 Local Ranking",
+      timeframe: "4 months",
+      seoFocus: "Local SEO"
     }
   },
   {
     id: 3,
-    title: "SaaS App Lowers CAC with Creative Testing and LinkedIn Distribution",
+    title: "SaaS Company Reduces Customer Acquisition Cost with Content-Driven SEO",
     company: "CloudFlow Solutions",
     industry: "SaaS",
-    challenge: "Rising CPMs and stagnant CTRs on Meta; weak content distribution on LinkedIn limited demo pipeline.",
-    solution: "Monthly creative sprints for hooks and angles, LinkedIn carousel series for founders, and retargeting to high‑intent visitors.",
+    challenge: "High customer acquisition costs from paid ads, limited organic visibility, and difficulty reaching target audience through search.",
+    solution: "Comprehensive content strategy, keyword-optimized blog posts, technical documentation SEO, and strategic internal linking to drive organic leads.",
     results: [
       {
-        metric: "CAC",
-        value: "−34%",
-        description: "Lower customer acquisition cost from paid social"
+        metric: "Organic Leads",
+        value: "+450%",
+        description: "Increase in qualified leads from organic search"
       },
       {
-        metric: "Demo Requests",
-        value: "+78%",
-        description: "From LinkedIn distribution and retargeting"
+        metric: "CAC Reduction",
+        value: "-60%",
+        description: "Lower customer acquisition cost overall"
       },
       {
-        metric: "CTR",
-        value: "+52%",
-        description: "On best performing creatives"
+        metric: "Content Traffic",
+        value: "+380%",
+        description: "Blog and resource page traffic growth"
       },
       {
-        metric: "Sales Cycle",
-        value: "−19%",
-        description: "Shorter time from MQL to demo"
+        metric: "Conversion Rate",
+        value: "+25%",
+        description: "Better qualified organic traffic converts more"
       }
     ],
-    testimonial: "The creative testing cadence changed our paid results, and the LinkedIn playbook filled the top of funnel.",
+    testimonial: "SEO transformed our lead generation. We're getting high-quality prospects without the high cost of paid advertising.",
     testimonialAuthor: "Marco Schneider",
     testimonialRole: "CTO, CloudFlow Solutions",
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=500&fit=crop",
     stats: {
-      costSaved: "−34% CAC",
-      timeframe: "3 months",
-      vaCount: "Meta + LinkedIn"
+      mainResult: "-60% CAC",
+      timeframe: "8 months",
+      seoFocus: "Content SEO"
     }
   }
 ];
@@ -172,10 +172,10 @@ export const CaseStudies = () => {
             Success Stories
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-foreground">
-            Social Media Success Stories
+            SEO Success Stories
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            See how brands grew reach, engagement, and revenue with our dedicated SMM programs.
+            See how businesses achieved top rankings, increased organic traffic, and boosted revenue with our proven SEO strategies.
           </p>
         </motion.div>
 
@@ -215,12 +215,12 @@ export const CaseStudies = () => {
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-4 sm:mb-5 pb-4 sm:pb-5 border-b border-border">
                   <div className="text-center">
-                    <div className="text-gold font-bold text-sm sm:text-base lg:text-lg">{study.stats.costSaved}</div>
+                    <div className="text-gold font-bold text-sm sm:text-base lg:text-lg">{study.stats.mainResult}</div>
                     <div className="text-[10px] sm:text-xs text-muted-foreground">Result</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-gold font-bold text-sm sm:text-base lg:text-lg">{study.stats.vaCount}</div>
-                    <div className="text-[10px] sm:text-xs text-muted-foreground">Channels</div>
+                    <div className="text-gold font-bold text-sm sm:text-base lg:text-lg">{study.stats.seoFocus}</div>
+                    <div className="text-[10px] sm:text-xs text-muted-foreground">SEO Focus</div>
                   </div>
                   <div className="text-center">
                     <div className="text-gold font-bold text-sm sm:text-base lg:text-lg">{study.stats.timeframe}</div>

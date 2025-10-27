@@ -7,21 +7,21 @@ const testimonials = [
     name: "Emma Rodriguez",
     company: "Luxe Beauty Co.",
     role: "Founder",
-    content: "Our Instagram went from 2K to 47K followers in 6 months. The reels strategy they built is pure gold—engagement is through the roof.",
+    content: "Our organic traffic increased 400% in 8 months. We went from page 3 to ranking #1 for our main keywords. The ROI from SEO has been incredible.",
     rating: 5
   },
   {
     name: "David Chen",
     company: "Peak Performance Coaching",
     role: "CEO",
-    content: "LinkedIn was a ghost town for us. Now we're getting 3–5 qualified leads per week from organic content alone. Game changer.",
+    content: "Local SEO was a game changer. We now dominate local search and get 15+ qualified leads per week from Google. Best investment we've made.",
     rating: 5
   },
   {
     name: "Sophie Martens",
     company: "Urban Eats",
     role: "Marketing Lead",
-    content: "They handle everything—content, community, analytics. Our TikTok blew up and we're seeing real foot traffic from it. Worth every cent.",
+    content: "Their technical SEO audit fixed issues we didn't even know existed. Site speed improved 85% and we're ranking for 300+ keywords now.",
     rating: 5
   }
 ];
@@ -45,10 +45,10 @@ export const Testimonials = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-2">
-            Trusted by <span className="text-gold">Brands That Grow</span>
+            Trusted by <span className="text-gold">Brands That Rank</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl px-2">
-            Real growth from real brands who partnered with us.
+            Real SEO results from real businesses who partnered with us.
           </p>
         </motion.div>
 
@@ -93,10 +93,10 @@ export const Testimonials = () => {
               Success Story
             </span>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
-              Case Study: <span className="text-gold">340% Follower Growth in 90 Days</span>
+              Case Study: <span className="text-gold">450% Organic Traffic Growth in 6 Months</span>
             </h3>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-5 sm:mb-6 leading-relaxed max-w-3xl">
-              See how a local wellness brand scaled from 8K to 35K followers and turned Instagram into their #1 revenue channel.
+              See how an e-commerce store went from 2K to 11K monthly organic visitors and turned SEO into their #1 revenue channel.
             </p>
             <Button variant="gold" size="lg" className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
               View Full Case Study

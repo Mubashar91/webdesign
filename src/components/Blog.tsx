@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, Clock, ArrowRight, Instagram, LinkedinIcon, Music2, Youtube, Facebook, Twitter } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Search, TrendingUp, FileText, Settings, BarChart3, Link } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 interface BlogPost {
@@ -12,133 +12,136 @@ interface BlogPost {
   readTime: string;
   category: string;
   image: string;
-  platforms?: Array<"instagram" | "tiktok" | "linkedin" | "youtube" | "facebook" | "twitter">;
+  seoTopics?: Array<"keyword-research" | "on-page" | "technical" | "content" | "link-building" | "analytics">;
 }
 
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "Instagram Growth in 90 Days: Content Pillars That Compound",
-    excerpt: "A repeatable pillar system (educate, proof, engage) with reels-first execution and weekly iteration.",
+    title: "Keyword Research Mastery: Find High-Value Keywords That Convert",
+    excerpt: "A systematic approach to discovering profitable keywords with low competition and high search intent.",
     content: `
-      <h2>Pillars</h2>
+      <h2>Research Process</h2>
       <ul>
-        <li>Educate: how-tos and frameworks your audience can use today</li>
-        <li>Proof: case studies, before/after, client shout-outs</li>
-        <li>Engage: polls, hot takes, challenges</li>
+        <li>Seed keywords: Start with your core business terms</li>
+        <li>Competitor analysis: Steal their best-performing keywords</li>
+        <li>Long-tail discovery: Find specific, high-intent phrases</li>
+        <li>Search intent mapping: Match keywords to user goals</li>
       </ul>
-      <h3>Cadence</h3>
-      <p>3–4 reels/week + 1 carousel. Track saves and shares as leading indicators.</p>
+      <h3>Tools & Metrics</h3>
+      <p>Use Ahrefs, SEMrush, and Google Keyword Planner. Focus on search volume, keyword difficulty, and CPC.</p>
     `,
-    author: "Agency Team",
-    date: "September 22, 2025",
-    readTime: "5 min read",
-    category: "Instagram",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop&q=80",
-    platforms: ["instagram"]
+    author: "SEO Team",
+    date: "October 15, 2025",
+    readTime: "8 min read",
+    category: "Keyword Research",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+    seoTopics: ["keyword-research"]
   },
   {
     id: 2,
-    title: "TikTok Hooks That Stop the Scroll (With Examples)",
-    excerpt: "Seven high-converting hook patterns you can plug into your next 15-second video.",
+    title: "On-Page SEO Checklist: Optimize Every Element for Rankings",
+    excerpt: "Complete guide to optimizing title tags, meta descriptions, headers, and content for maximum visibility.",
     content: `
-      <h2>Hook Patterns</h2>
+      <h2>Essential Elements</h2>
       <ul>
-        <li>Counter-intuitive claim</li>
-        <li>POV transformation</li>
-        <li>Myth vs reality</li>
-        <li>Numbered promise</li>
+        <li>Title tags: Include primary keyword within 60 characters</li>
+        <li>Meta descriptions: Compelling copy with keywords in 155 characters</li>
+        <li>Header structure: H1, H2, H3 hierarchy with keyword variations</li>
+        <li>Internal linking: Connect related pages strategically</li>
       </ul>
-      <p>Record front-facing with captions and fast cuts. Keep the first 2 seconds punchy.</p>
+      <p>Focus on user experience while maintaining keyword optimization throughout.</p>
     `,
-    author: "Creative Lab",
-    date: "October 3, 2025",
-    readTime: "4 min read",
-    category: "TikTok",
-    image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=800&auto=format&fit=crop&q=80",
-    platforms: ["tiktok", "instagram"]
+    author: "Content Team",
+    date: "October 8, 2025",
+    readTime: "6 min read",
+    category: "On-Page SEO",
+    image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&auto=format&fit=crop&q=80",
+    seoTopics: ["on-page", "content"]
   },
   {
     id: 3,
-    title: "LinkedIn Carousel System for B2B Inbound",
-    excerpt: "Swipe-friendly frames that convert profile views into pipeline.",
+    title: "Technical SEO Audit: Fix Issues That Kill Your Rankings",
+    excerpt: "Identify and resolve technical problems that prevent search engines from properly crawling and indexing your site.",
     content: `
-      <h2>Template</h2>
+      <h2>Critical Issues</h2>
       <ul>
-        <li>Frame 1: outcome promise</li>
-        <li>Frames 2–6: steps, proof, examples</li>
-        <li>Frame 7: CTA (demo, guide, or checklist)</li>
+        <li>Site speed: Optimize for Core Web Vitals</li>
+        <li>Mobile responsiveness: Ensure perfect mobile experience</li>
+        <li>Crawl errors: Fix 404s and redirect chains</li>
+        <li>Schema markup: Implement structured data</li>
       </ul>
-      <p>Post 2x/week per leader. Repurpose to short-form video.</p>
+      <p>Use Google Search Console, PageSpeed Insights, and Screaming Frog for comprehensive audits.</p>
     `,
-    author: "Strategy",
-    date: "August 29, 2025",
-    readTime: "6 min read",
-    category: "LinkedIn",
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop&q=80",
-    platforms: ["linkedin"]
+    author: "Technical Team",
+    date: "September 28, 2025",
+    readTime: "10 min read",
+    category: "Technical SEO",
+    image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&auto=format&fit=crop&q=80",
+    seoTopics: ["technical"]
   },
   {
     id: 4,
-    title: "UGC That Converts: How to Brief Creators",
-    excerpt: "A clear brief template and angle matrix to get on-brand content that sells.",
+    title: "Content That Ranks: Writing for Users and Search Engines",
+    excerpt: "Create compelling, SEO-optimized content that satisfies search intent and drives conversions.",
     content: `
-      <h2>Brief Template</h2>
+      <h2>Content Strategy</h2>
       <ul>
-        <li>Audience + outcome</li>
-        <li>Do/Don'ts and claims</li>
-        <li>Angles to test</li>
-        <li>Deliverables and file specs</li>
+        <li>Search intent analysis: Understand what users really want</li>
+        <li>Content depth: Comprehensive coverage beats thin content</li>
+        <li>Keyword integration: Natural placement throughout content</li>
+        <li>User engagement: Structure for readability and interaction</li>
       </ul>
-      <p>Test 3 hooks per angle. Keep winners in rotation.</p>
+      <p>Balance keyword optimization with valuable, engaging content that keeps users on your site.</p>
     `,
-    author: "Creator Ops",
-    date: "July 18, 2025",
+    author: "Content Strategy",
+    date: "September 15, 2025",
     readTime: "7 min read",
-    category: "UGC",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&auto=format&fit=crop&q=80",
-    platforms: ["instagram", "tiktok", "youtube"]
+    category: "Content SEO",
+    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
+    seoTopics: ["content", "on-page"]
   },
   {
     id: 5,
-    title: "Content Calendar: The Minimal System That Sticks",
-    excerpt: "A simple workflow that keeps you posting across IG, TikTok, and LinkedIn without burnout.",
+    title: "Link Building That Works: Earn High-Quality Backlinks",
+    excerpt: "Proven strategies to acquire authoritative backlinks that boost your domain authority and rankings.",
     content: `
-      <h2>Workflow</h2>
+      <h2>Link Building Tactics</h2>
       <ul>
-        <li>Mon: Ideate + outline</li>
-        <li>Tue: Shoot + design</li>
-        <li>Wed: Edit + caption</li>
-        <li>Thu: Schedule + community</li>
-        <li>Fri: Report + learnings</li>
+        <li>Resource page outreach: Get listed on industry resource pages</li>
+        <li>Broken link building: Replace dead links with your content</li>
+        <li>Guest posting: Contribute to authoritative industry sites</li>
+        <li>Digital PR: Create newsworthy content for media coverage</li>
       </ul>
+      <p>Focus on quality over quantity. One high-authority link beats dozens of low-quality ones.</p>
     `,
-    author: "Project Mgmt",
-    date: "June 7, 2025",
-    readTime: "5 min read",
-    category: "Workflow",
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&auto=format&fit=crop&q=80",
-    platforms: ["instagram", "tiktok", "linkedin"]
+    author: "Link Building Team",
+    date: "August 30, 2025",
+    readTime: "9 min read",
+    category: "Link Building",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80",
+    seoTopics: ["link-building"]
   },
   {
     id: 6,
-    title: "From Vanity Metrics to Revenue: The Social Scorecard",
-    excerpt: "Metrics that matter and how to report them to leadership.",
+    title: "SEO Analytics: Track What Matters for Business Growth",
+    excerpt: "Essential metrics and reporting strategies to measure SEO success and demonstrate ROI.",
     content: `
-      <h2>Scorecard</h2>
+      <h2>Key Metrics</h2>
       <ul>
-        <li>Organic: reach, ER, saves, shares</li>
-        <li>Paid: CTR, CVR, CAC, ROAS</li>
-        <li>Revenue: demo requests, assisted revenue</li>
+        <li>Organic traffic: Monitor growth and traffic quality</li>
+        <li>Keyword rankings: Track target keyword positions</li>
+        <li>Conversion rates: Measure organic traffic conversions</li>
+        <li>Technical health: Monitor crawl errors and site speed</li>
       </ul>
-      <p>Include UTMs and qualitative notes from comments/DMs.</p>
+      <p>Use Google Analytics 4, Search Console, and rank tracking tools for comprehensive reporting.</p>
     `,
-    author: "Analytics",
-    date: "May 24, 2025",
-    readTime: "6 min read",
-    category: "Analytics",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
-    platforms: ["instagram", "tiktok", "linkedin", "facebook", "twitter"]
+    author: "Analytics Team",
+    date: "August 12, 2025",
+    readTime: "8 min read",
+    category: "SEO Analytics",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+    seoTopics: ["analytics"]
   }
 ];
 
@@ -170,7 +173,7 @@ export const Blog = () => {
             Blog & <span className="text-gold">Resources</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            Strategies, templates, and playbooks to grow with social—content, community, paid, and analytics.
+            Expert insights, strategies, and guides to improve your search rankings and drive organic traffic growth.
           </p>
         </motion.div>
 
@@ -227,14 +230,14 @@ export const Blog = () => {
                   <div className="flex items-center justify-between mt-auto pt-3 border-t border-border/30">
                     <span className="text-[10px] sm:text-xs text-muted-foreground truncate">By {post.author}</span>
                     <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
-                      {post.platforms && (
+                      {post.seoTopics && (
                         <div className="flex items-center gap-1.5 sm:gap-2 text-muted-foreground/70">
-                          {post.platforms.includes("instagram") && <Instagram className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="Instagram" />}
-                          {post.platforms.includes("tiktok") && <Music2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="TikTok" />}
-                          {post.platforms.includes("linkedin") && <LinkedinIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="LinkedIn" />}
-                          {post.platforms.includes("youtube") && <Youtube className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="YouTube" />}
-                          {post.platforms.includes("facebook") && <Facebook className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="Facebook" />}
-                          {post.platforms.includes("twitter") && <Twitter className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="X" />}
+                          {post.seoTopics.includes("keyword-research") && <Search className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="Keyword Research" />}
+                          {post.seoTopics.includes("on-page") && <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="On-Page SEO" />}
+                          {post.seoTopics.includes("technical") && <Settings className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="Technical SEO" />}
+                          {post.seoTopics.includes("content") && <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="Content SEO" />}
+                          {post.seoTopics.includes("link-building") && <Link className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="Link Building" />}
+                          {post.seoTopics.includes("analytics") && <BarChart3 className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-label="SEO Analytics" />}
                         </div>
                       )}
                       <div className="flex items-center gap-1 text-gold font-semibold text-[10px] sm:text-xs group-hover:gap-1.5 transition-all">

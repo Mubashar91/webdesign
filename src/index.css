@@ -14,120 +14,121 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* SMM Agency Purple + Blue Theme (Light, polished) */
-    --background: 228 33% 99%;
-    --foreground: 233 25% 12%;
+    /* SEO Agency Dark Blue + Blue Theme (Light, professional) */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%; /* Black text as requested */
 
     --card: 0 0% 100%;
-    --card-foreground: 233 20% 12%;
+    --card-foreground: 0 0% 0%; /* Black text */
 
     --popover: 0 0% 100%;
-    --popover-foreground: 233 20% 12%;
+    --popover-foreground: 0 0% 0%; /* Black text */
 
-    --primary: 265 80% 55%; /* vibrant purple */
+    --primary: 220 100% 50%; /* Bright blue for highlights */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 230 25% 96%;
-    --secondary-foreground: 233 20% 12%;
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 228 30% 97%;
-    --muted-foreground: 228 10% 38%;
+    --muted: 220 13% 97%;
+    --muted-foreground: 220 10% 40%;
 
-    --accent: 265 80% 55%; /* purple accent */
+    --accent: 220 100% 50%; /* Blue accent for highlights */
     --accent-foreground: 0 0% 100%;
 
-    --hover: 228 24% 93%;
-    --hover-foreground: 233 25% 12%;
+    --hover: 220 15% 93%;
+    --hover-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 228 20% 86%;
-    --input: 228 20% 86%;
-    --ring: 265 80% 55%;
+    --border: 220 13% 86%;
+    --input: 220 13% 86%;
+    --ring: 220 100% 50%;
 
     --radius: 0.5rem;
 
-    /* Custom tokens */
-    --gold: 265 80% 55%;      /* repurposed as purple */
-    --gold-dark: 265 80% 45%;
-    --gold-light: 265 80% 65%;
-    --brand-blue: 220 85% 60%; /* deep blue for gradients and accents */
+    /* Custom tokens for SEO Agency */
+    --gold: 220 100% 50%;      /* Blue for highlights */
+    --gold-dark: 220 100% 40%; /* Darker blue */
+    --gold-light: 220 100% 60%; /* Lighter blue */
+    --brand-blue: 220 85% 25%; /* Dark blue for details */
     
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(265 80% 50%) 0%, hsl(var(--brand-blue)) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(230 30% 12%) 0%, hsl(230 30% 18%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(220 100% 50%) 0%, hsl(220 85% 25%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(220 85% 15%) 0%, hsl(220 85% 20%) 100%);
     
     /* Shadows */
-    --shadow-gold: 0 10px 40px -10px hsl(265 80% 55% / 0.5);
-    --shadow-gold-lg: 0 25px 80px -20px hsl(265 80% 55% / 0.6);
-    --shadow-elegant: 0 20px 60px -15px hsl(230 30% 20% / 0.3);
-    --shadow-brutal: 8px 8px 0px hsl(265 80% 55%);
+    --shadow-gold: 0 10px 40px -10px hsl(220 100% 50% / 0.3);
+    --shadow-gold-lg: 0 25px 80px -20px hsl(220 100% 50% / 0.4);
+    --shadow-elegant: 0 20px 60px -15px hsl(220 85% 25% / 0.3);
+    --shadow-brutal: 8px 8px 0px hsl(220 100% 50%);
     
     /* Transitions */
     --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --sidebar-background: 232 25% 97%;
-    --sidebar-foreground: 233 20% 12%;
-    --sidebar-primary: 265 80% 55%;
+    --sidebar-background: 220 15% 97%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 220 100% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 230 25% 95%;
-    --sidebar-accent-foreground: 233 20% 12%;
-    --sidebar-border: 230 20% 88%;
-    --sidebar-ring: 265 80% 55%;
+    --sidebar-accent: 220 15% 95%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 220 13% 88%;
+    --sidebar-ring: 220 100% 50%;
 
     /* Typographic + layout tokens */
-    --heading-color: 0 0% 0%;
+    --heading-color: 0 0% 0%; /* Black headings */
     --heading-size: 1.5rem;
     --side-padding: 1.5rem;
   }
 
   .dark {
-    /* SMM Agency Purple + Blue Theme (Dark) */
-    --background: 230 30% 10%; /* deep blue */
-    --foreground: 0 0% 100%;
+    /* Enhanced SEO Agency Dark Mode */
+    --background: 220 85% 6%; /* Deeper dark blue background */
+    --foreground: 0 0% 98%; /* Softer white for better readability */
 
-    --card: 230 30% 14%;
-    --card-foreground: 0 0% 100%;
+    --card: 220 85% 10%; /* Slightly lighter cards for better contrast */
+    --card-foreground: 0 0% 98%;
 
-    --popover: 230 30% 14%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 220 85% 10%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 265 80% 65%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 220 100% 65%; /* Brighter blue for better visibility */
+    --primary-foreground: 220 85% 6%;
 
-    --secondary: 230 25% 16%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 220 30% 18%; /* Better contrast for secondary elements */
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 230 25% 16%;
-    --muted-foreground: 230 10% 70%;
+    --muted: 220 30% 18%;
+    --muted-foreground: 220 15% 75%; /* Improved readability */
 
-    --accent: 265 80% 65%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 220 100% 65%; /* Consistent with primary */
+    --accent-foreground: 220 85% 6%;
 
-    --hover: 230 25% 20%;
-    --hover-foreground: 0 0% 100%;
+    --hover: 220 35% 22%; /* More pronounced hover states */
+    --hover-foreground: 0 0% 98%;
 
-    --destructive: 350 84% 48%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 350 84% 55%; /* Slightly brighter for visibility */
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 230 20% 26%;
-    --input: 230 20% 26%;
-    --ring: 265 80% 65%;
+    --border: 220 25% 28%; /* Better border visibility */
+    --input: 220 25% 28%;
+    --ring: 220 100% 65%;
     
-    --sidebar-background: 230 30% 12%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 265 80% 65%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 230 25% 16%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 230 20% 26%;
-    --sidebar-ring: 265 80% 65%;
+    --sidebar-background: 220 85% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 220 100% 65%;
+    --sidebar-primary-foreground: 220 85% 6%;
+    --sidebar-accent: 220 30% 18%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 25% 28%;
+    --sidebar-ring: 220 100% 65%;
 
-    --heading-color: 0 0% 100%;
-    --brand-blue: 220 90% 65%;
+    --heading-color: 0 0% 98%;
+    --brand-blue: 220 100% 75%; /* Even brighter for dark theme visibility */
+    --gold: 220 100% 65%; /* Consistent blue highlights */
   }
 }
 
@@ -135,24 +136,76 @@ All colors MUST be HSL.
   * {
     @apply border-border;
     scroll-behavior: smooth;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: hsl(var(--heading-color));
+    transition: color 0.3s ease;
   }
 
- h1, h2, h3, h4, h5, h6 {
-  @apply font-poppins font-bold;
-  text-align: left !important;
-  color: hsl(var(--heading-color));
- }
+  /* Enhanced dark mode transitions */
+  .dark {
+    color-scheme: dark;
+  }
 
- h1 { font-size: calc(var(--heading-size) * 1.6); }
- h2 { font-size: calc(var(--heading-size) * 1.4); }
- h3 { font-size: calc(var(--heading-size) * 1.2); }
- h4 { font-size: var(--heading-size); }
- h5 { font-size: calc(var(--heading-size) * 0.9); }
- h6 { font-size: calc(var(--heading-size) * 0.8); }
+  /* Improved scrollbar for dark mode */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--gold));
+  }
+
+  /* Enhanced focus states */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--gold));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Smooth animations for all interactive elements */
+  button, a, [role="button"] {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Enhanced backdrop blur support */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .backdrop-blur-lg {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .backdrop-blur-xl {
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
 }
 
 @layer utilities {

@@ -9,28 +9,28 @@ import { HelpCircle, Shield, Zap } from "lucide-react";
 
 const faqs = [
   {
-    question: "Which platforms do you manage?",
-    answer: "We specialize in Instagram, TikTok, LinkedIn, Facebook, X (Twitter), and YouTube. We tailor strategies per platform—reels for IG, short-form for TikTok, carousels for LinkedIn, etc."
+    question: "How long does it take to see SEO results?",
+    answer: "SEO is a long-term strategy. You'll typically see initial improvements in 3-6 months, with significant results in 6-12 months. We provide monthly reports to track progress and adjust strategies based on performance data."
   },
   {
-    question: "Do you create all the content or do I need to provide it?",
-    answer: "We handle everything: scripting, design, video editing, captions, and scheduling. You approve the content calendar and final posts—we do the heavy lifting."
+    question: "Do you guarantee first page rankings?",
+    answer: "While we can't guarantee specific rankings (no ethical SEO agency can), we guarantee measurable improvements in organic traffic, keyword rankings, and search visibility using proven white-hat techniques."
   },
   {
-    question: "How often will you post on my accounts?",
-    answer: "Typically 3–5 posts per week per platform, depending on your plan. We prioritize quality over quantity and adjust cadence based on what performs best for your audience."
+    question: "What's included in your SEO audit?",
+    answer: "Our comprehensive audit covers technical SEO, on-page optimization, content analysis, keyword research, competitor analysis, backlink profile review, and site speed optimization. You'll receive a detailed report with actionable recommendations."
   },
   {
-    question: "What if I don't like the content you create?",
-    answer: "You review and approve everything before it goes live. We offer unlimited revisions during the approval window and refine our approach based on your feedback each week."
+    question: "Do you work with my existing content team?",
+    answer: "Absolutely! We collaborate with your in-house team, providing SEO guidelines, keyword strategies, and content optimization recommendations. We can also create SEO-optimized content if needed."
   },
   {
-    question: "How do you measure success?",
-    answer: "We track reach, engagement rate, follower growth, saves, shares, and link clicks. Monthly reports tie metrics to your business goals—whether that's leads, sales, or brand awareness."
+    question: "How do you measure SEO success?",
+    answer: "We track organic traffic growth, keyword rankings, click-through rates, conversion rates, domain authority, and revenue from organic search. Monthly reports show progress toward your specific business goals."
   },
   {
-    question: "Can I scale to more platforms or reduce services?",
-    answer: "Yes. You can add or remove platforms, adjust posting frequency, or pause with 30 days notice. We're built for flexibility as your needs evolve."
+    question: "Can you help with local SEO?",
+    answer: "Yes! We specialize in local SEO including Google My Business optimization, local citation building, review management, and location-based keyword targeting to help you dominate local search results."
   }
 ];
 
@@ -77,7 +77,7 @@ export const FAQ = () => {
             </h2>
             {/* Description - Centered */}
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed px-2 text-center mx-auto">
-              Everything you need to know about our social media management. Can't find what you're looking for? Chat with us.
+              Everything you need to know about our SEO services. Can't find what you're looking for? Chat with us.
             </p>
           </motion.div>
 
@@ -132,10 +132,10 @@ export const FAQ = () => {
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-bold text-foreground mb-1.5">
-                    Content Approval
+                    White-Hat SEO
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    You review and approve all content before it goes live—unlimited revisions included
+                    We use only ethical, Google-approved SEO techniques that protect your site long-term
                   </p>
                 </div>
               </div>
@@ -148,10 +148,10 @@ export const FAQ = () => {
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-bold text-foreground mb-1.5">
-                    Full-Stack Social
+                    Complete SEO Suite
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Instagram • TikTok • LinkedIn • Canva • CapCut • Analytics & more
+                    Technical SEO • Content • Keywords • Links • Local SEO • Analytics & more
                   </p>
                 </div>
               </div>

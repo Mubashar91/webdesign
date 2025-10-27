@@ -70,10 +70,23 @@ export const Navbar = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex items-center space-x-2 sm:space-x-3"
           >
-            <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-gold rounded-lg flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110">
-              <span className="text-foreground font-bold text-base sm:text-lg md:text-lg lg:text-xl">L</span>
-            </div>
-            <span className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-foreground hover:text-gold transition-colors duration-300">LuxVA</span>
+            <motion.div 
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-gold rounded-lg flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300"
+              whileHover={{ 
+                scale: 1.1, 
+                rotate: 5,
+                boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.5)"
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="text-foreground font-bold text-base sm:text-lg md:text-lg lg:text-xl">S</span>
+            </motion.div>
+            <motion.span 
+              className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-foreground hover:text-gold transition-colors duration-300"
+              whileHover={{ scale: 1.05 }}
+            >
+              SEO Pro
+            </motion.span>
           </motion.div>
 
           {/* Desktop Navigation - Show on medium screens and up */}
