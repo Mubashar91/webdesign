@@ -12,7 +12,7 @@ export const FinalCTA = () => {
       transition={{ duration: 0.8 }}
     >
       {/* Enhanced background elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden hidden md:block">
         {/* Animated grid pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -78,38 +78,27 @@ export const FinalCTA = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.3, type: "spring", stiffness: 120 }}
           >
-            <div className="px-5 py-2.5 sm:px-6 sm:py-3 bg-white/25 backdrop-blur-lg rounded-full text-sm sm:text-base font-bold text-white flex items-center gap-2 border border-white/40 shadow-xl hover:scale-105 transition-transform duration-300">
+            <div className="px-5 py-2.5 sm:px-6 sm:py-3 bg-white/20 backdrop-blur-lg rounded-full text-sm sm:text-base font-semibold text-white flex items-center gap-2 border border-white/30 shadow-xl">
               <motion.div
                 animate={{ rotate: [0, 360] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               >
                 <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
               </motion.div>
-              <span className="whitespace-nowrap">Start Your SEO Journey Today</span>
+              <span className="whitespace-nowrap">Let's talk design</span>
               <div className="w-1.5 h-1.5 xs:w-2 xs:h-2 rounded-full bg-green-400 animate-pulse"></div>
             </div>
           </motion.div>
 
           {/* Main headline with improved hierarchy */}
           <motion.h2 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-6 sm:mb-8 md:mb-10 text-white leading-[1.1]"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 text-white leading-[1.1]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <span className="block drop-shadow-lg">Ready to Rank</span>
-            <span className="relative inline-block mt-2 sm:mt-3">
-              <span className="relative z-10 bg-gradient-to-r from-white via-amber-50 to-white bg-clip-text text-transparent drop-shadow-2xl">
-                Higher?
-              </span>
-              <motion.span 
-                className="absolute bottom-2 sm:bottom-3 left-0 w-full h-4 sm:h-5 bg-white/30 -z-0 rounded-full blur-sm"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-              />
-            </span>
+            <span className="block drop-shadow-lg">Launch a high‑converting website</span>
           </motion.h2>
           
           {/* Subtitle with benefits */}
@@ -120,23 +109,21 @@ export const FinalCTA = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <p className="text-xl sm:text-2xl md:text-3xl text-white/95 mb-8 leading-relaxed font-semibold drop-shadow-md">
-              Let's boost your search rankings in 30-90 days
+            <p className="text-lg sm:text-xl md:text-2xl text-white/95 mb-8 leading-relaxed font-semibold drop-shadow-md">
+              Book a 15‑minute design consult. No pressure.
             </p>
             
             {/* Benefits list */}
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 mt-8">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 mt-6">
               {[
-                "Free SEO audit",
-                "30-day money-back guarantee",
-                "Proven ranking strategies",
-                "24/7 support"
+                "Fast, modern, on‑brand",
+                "Built for conversions"
               ].map((benefit, index) => (
                 <motion.div
                   key={benefit}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.4 + index * 0.1 }}
+                  transition={{ delay: 0.3 + index * 0.1 }}
                   className="flex items-center gap-2 bg-white/15 backdrop-blur-md rounded-full px-4 sm:px-5 py-2 sm:py-2.5 border border-white/30 hover:bg-white/25 hover:scale-105 transition-all duration-300 shadow-lg"
                 >
                   <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
@@ -148,7 +135,7 @@ export const FinalCTA = () => {
           
           {/* Enhanced CTA buttons */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center mb-12 sm:mb-16"
+            className="flex justify-center items-center mb-10 sm:mb-12"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -157,43 +144,30 @@ export const FinalCTA = () => {
             <Button 
               size="lg"
               onClick={() => window.location.href = '/book-meeting'}
-              className="bg-white text-gold hover:bg-white/95 hover:scale-[1.08] active:scale-[1.02] group px-8 sm:px-12 py-6 sm:py-8 text-base sm:text-lg font-extrabold rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] hover:shadow-[0_30px_80px_-15px_rgba(0,0,0,0.5)] transition-all duration-300 border-2 border-white relative overflow-hidden cursor-pointer w-full sm:w-auto"
+              className="bg-white text-gold hover:bg-white/95 hover:scale-[1.03] active:scale-[1.01] group px-8 sm:px-12 py-6 sm:py-7 text-base sm:text-lg font-bold rounded-xl shadow-[0_12px_40px_-12px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_56px_-12px_rgba(0,0,0,0.4)] transition-all duration-300 border-2 border-white relative overflow-hidden cursor-pointer w-full sm:w-auto"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/20 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/10 to-gold/0 animate-pulse" />
               <span className="relative flex items-center gap-3">
-                <span>Book Free SEO Audit</span>
+                <span>Book Free Consult</span>
                 <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-2 transition-transform duration-300" />
-              </span>
-            </Button>
-            
-            <Button 
-              variant="outline"
-              size="lg"
-              onClick={() => window.open('https://wa.me/YOUR_WHATSAPP_NUMBER', '_blank')}
-              className="bg-white/10 border-3 border-white text-white hover:bg-white hover:text-gold hover:scale-[1.08] active:scale-[1.02] px-6 sm:px-10 py-6 sm:py-8 text-base sm:text-lg font-bold rounded-2xl backdrop-blur-lg transition-all duration-300 group relative overflow-hidden cursor-pointer w-full sm:w-auto shadow-lg hover:shadow-2xl"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="relative flex items-center gap-3">
-                <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 group-hover:rotate-12 transition-transform duration-300" />
-                <span>Quick WhatsApp Chat</span>
               </span>
             </Button>
           </motion.div>
 
           {/* Stats Section */}
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto mb-12"
+            className="hidden"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.35 }}
           >
             {[
-              { icon: Search, value: "500+", label: "Clients Ranked" },
-              { icon: TrendingUp, value: "350%", label: "Avg. Traffic Boost" },
+              { icon: Search, value: "300+", label: "Sites Launched" },
+              { icon: TrendingUp, value: "2.5x", label: "Avg. Conversion Lift" },
               { icon: Award, value: "98%", label: "Satisfaction" },
-              { icon: Clock, value: "30d", label: "First Results" }
+              { icon: Clock, value: "3–6w", label: "Project Timeline" }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

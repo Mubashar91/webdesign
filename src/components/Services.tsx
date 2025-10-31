@@ -5,39 +5,39 @@ import { useRef } from "react";
 const services = [
   {
     icon: Search,
-    title: "Keyword Research & Strategy",
-    description: "Comprehensive keyword analysis, search intent mapping, competitor research, and strategic roadmaps to dominate your niche",
-    benefit: "Target high-value keywords"
+    title: "Discovery & UX Strategy",
+    description: "User research, site map, content strategy, and conversion goals to guide a high‑performing website.",
+    benefit: "Clarity and direction"
   },
   {
     icon: FileText,
-    title: "Content Optimization",
-    description: "SEO-optimized content creation, blog writing, meta descriptions, and content audits designed to rank and convert",
-    benefit: "3–5x organic traffic"
+    title: "UI Design & Branding",
+    description: "Modern visual design, typography, color systems, and component libraries aligned to your brand.",
+    benefit: "On‑brand visuals"
   },
   {
     icon: Settings,
-    title: "Technical SEO",
-    description: "Site speed optimization, mobile responsiveness, schema markup, and technical audits to improve crawlability",
-    benefit: "Faster indexing & ranking"
+    title: "Responsive Development",
+    description: "Fast, accessible, mobile‑first builds with clean code, animations, and pixel‑perfect execution.",
+    benefit: "Lightning‑fast UX"
   },
   {
     icon: BarChart3,
-    title: "SEO Analytics & Reporting",
-    description: "Monthly ranking reports, traffic analysis, conversion tracking, and data-driven recommendations for continuous growth",
-    benefit: "Track ranking progress"
+    title: "Performance & SEO Basics",
+    description: "Core Web Vitals tuning, image/CDN optimization, semantic HTML, and essential on‑page SEO.",
+    benefit: "Better Lighthouse scores"
   },
   {
     icon: Target,
-    title: "Local SEO",
-    description: "Google My Business optimization, local citations, review management, and geo-targeted strategies for local dominance",
-    benefit: "Dominate local search"
+    title: "CMS & Integrations",
+    description: "CMS setup (WordPress/Headless), forms, analytics, CRM/email integrations, and automation.",
+    benefit: "Easy publishing"
   },
   {
     icon: Link,
-    title: "Link Building",
-    description: "High-quality backlink acquisition, outreach campaigns, and authority building to boost your domain strength",
-    benefit: "Increase domain authority"
+    title: "CRO & Ongoing Support",
+    description: "A/B tests, heatmaps, funnel tweaks, and continuous improvements after launch.",
+    benefit: "Higher conversions"
   }
 ];
 
@@ -71,13 +71,13 @@ export const Services = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-foreground text-xs sm:text-sm md:text-base font-semibold rounded-full mb-3 sm:mb-4">
-            Our SEO Services
+            What We Do
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-5 px-2">
-            How We <span className="text-gold">Boost</span> Your Rankings
+            Services that <span className="text-gold">Boost</span> Your SEO
           </h2>
           <p className="text-base sm:text-lg md:text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed px-2">
-            Complete SEO solutions — from keyword research to technical optimization, we handle everything to get you ranking higher.
+            Research, content, technical fixes, and reporting — everything you need to rank faster with Lux VA Boost.
           </p>
         </motion.div>
 

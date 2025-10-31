@@ -1,27 +1,27 @@
 import { motion } from "framer-motion";
 
 const tools = [
-  { name: "Instagram", category: "Platform" },
-  { name: "TikTok", category: "Platform" },
-  { name: "LinkedIn", category: "Platform" },
-  { name: "Facebook", category: "Platform" },
-  { name: "X (Twitter)", category: "Platform" },
-  { name: "YouTube", category: "Platform" },
-  { name: "Canva", category: "Design" },
-  { name: "Adobe Suite", category: "Design" },
   { name: "Figma", category: "Design" },
-  { name: "CapCut", category: "Video Editing" },
-  { name: "Premiere Pro", category: "Video Editing" },
-  { name: "Final Cut Pro", category: "Video Editing" },
-  { name: "Hootsuite", category: "Scheduling" },
-  { name: "Buffer", category: "Scheduling" },
-  { name: "Later", category: "Scheduling" },
-  { name: "Sprout Social", category: "Analytics" },
-  { name: "Google Analytics", category: "Analytics" },
-  { name: "Meta Business Suite", category: "Analytics" }
+  { name: "Adobe XD", category: "Design" },
+  { name: "Webflow", category: "CMS" },
+  { name: "WordPress", category: "CMS" },
+  { name: "Next.js", category: "Development" },
+  { name: "React", category: "Development" },
+  { name: "Tailwind CSS", category: "Development" },
+  { name: "Framer Motion", category: "Development" },
+  { name: "Vercel", category: "Hosting" },
+  { name: "Netlify", category: "Hosting" },
+  { name: "Cloudflare", category: "Hosting" },
+  { name: "GA4", category: "Analytics" },
+  { name: "Hotjar", category: "Analytics" },
+  { name: "Plausible", category: "Analytics" },
+  { name: "Zapier", category: "Integrations" },
+  { name: "Make (Integromat)", category: "Integrations" },
+  { name: "HubSpot", category: "CRM" },
+  { name: "Airtable", category: "CMS" }
 ];
 
-const categories = ["Platform", "Design", "Video Editing", "Scheduling", "Analytics"];
+const categories = ["Design", "Development", "CMS", "Hosting", "Analytics", "Integrations", "CRM"];
 
 export const ToolsIntegration = () => {
   return (
@@ -41,10 +41,10 @@ export const ToolsIntegration = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-2">
-            We Work With <span className="text-gold">All Major Platforms</span>
+            We Build With <span className="text-gold">Modern Web Tools</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl px-2">
-            From content creation to analytics—we're fluent in the tools that power modern social media.
+            Design, development, CMS, hosting, and analytics—everything you need for fast, scalable websites.
           </p>
         </motion.div>
 

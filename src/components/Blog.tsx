@@ -18,128 +18,118 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "Keyword Research Mastery: Find High-Value Keywords That Convert",
-    excerpt: "A systematic approach to discovering profitable keywords with low competition and high search intent.",
+    title: "Design Systems 101: Build Faster with Consistent UI",
+    excerpt: "How to create a scalable design system with tokens, components, and documentation.",
     content: `
-      <h2>Research Process</h2>
+      <h2>Foundations</h2>
       <ul>
-        <li>Seed keywords: Start with your core business terms</li>
-        <li>Competitor analysis: Steal their best-performing keywords</li>
-        <li>Long-tail discovery: Find specific, high-intent phrases</li>
-        <li>Search intent mapping: Match keywords to user goals</li>
+        <li>Tokens: color, spacing, typography</li>
+        <li>Components: buttons, cards, forms</li>
+        <li>Documentation: usage guidelines and variants</li>
       </ul>
-      <h3>Tools & Metrics</h3>
-      <p>Use Ahrefs, SEMrush, and Google Keyword Planner. Focus on search volume, keyword difficulty, and CPC.</p>
+      <p>Design systems improve velocity and quality across teams.</p>
     `,
-    author: "SEO Team",
+    author: "Design Team",
     date: "October 15, 2025",
-    readTime: "8 min read",
-    category: "Keyword Research",
+    readTime: "7 min read",
+    category: "Web Design",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
-    seoTopics: ["keyword-research"]
+    seoTopics: ["content"]
   },
   {
     id: 2,
-    title: "On-Page SEO Checklist: Optimize Every Element for Rankings",
-    excerpt: "Complete guide to optimizing title tags, meta descriptions, headers, and content for maximum visibility.",
+    title: "Landing Page CRO: Above-the-Fold That Converts",
+    excerpt: "Hero sections, social proof, and clear CTAs that lift conversions without guesswork.",
     content: `
-      <h2>Essential Elements</h2>
+      <h2>Essentials</h2>
       <ul>
-        <li>Title tags: Include primary keyword within 60 characters</li>
-        <li>Meta descriptions: Compelling copy with keywords in 155 characters</li>
-        <li>Header structure: H1, H2, H3 hierarchy with keyword variations</li>
-        <li>Internal linking: Connect related pages strategically</li>
+        <li>Clear value prop + benefit-driven headline</li>
+        <li>Trust: logos, testimonials, metrics</li>
+        <li>Primary CTA: single action with low friction</li>
       </ul>
-      <p>Focus on user experience while maintaining keyword optimization throughout.</p>
+      <p>Test layout, copy, and visual hierarchy to boost CVR.</p>
     `,
-    author: "Content Team",
+    author: "CRO Team",
     date: "October 8, 2025",
     readTime: "6 min read",
-    category: "On-Page SEO",
+    category: "Conversion",
     image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&auto=format&fit=crop&q=80",
-    seoTopics: ["on-page", "content"]
+    seoTopics: ["content"]
   },
   {
     id: 3,
-    title: "Technical SEO Audit: Fix Issues That Kill Your Rankings",
-    excerpt: "Identify and resolve technical problems that prevent search engines from properly crawling and indexing your site.",
+    title: "Core Web Vitals for Designers & Devs",
+    excerpt: "Practical steps to hit green scores: images, scripts, fonts, and animation tips.",
     content: `
-      <h2>Critical Issues</h2>
+      <h2>Wins</h2>
       <ul>
-        <li>Site speed: Optimize for Core Web Vitals</li>
-        <li>Mobile responsiveness: Ensure perfect mobile experience</li>
-        <li>Crawl errors: Fix 404s and redirect chains</li>
-        <li>Schema markup: Implement structured data</li>
+        <li>Optimize images (AVIF/WebP, responsive, lazyload)</li>
+        <li>Reduce JS: code-split, defer, hydrate on visibility</li>
+        <li>Font loading: swap, subset, variable fonts</li>
       </ul>
-      <p>Use Google Search Console, PageSpeed Insights, and Screaming Frog for comprehensive audits.</p>
+      <p>Measure with Lighthouse and Web Vitals in production.</p>
     `,
-    author: "Technical Team",
+    author: "Performance Team",
     date: "September 28, 2025",
-    readTime: "10 min read",
-    category: "Technical SEO",
+    readTime: "9 min read",
+    category: "Performance",
     image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&auto=format&fit=crop&q=80",
     seoTopics: ["technical"]
   },
   {
     id: 4,
-    title: "Content That Ranks: Writing for Users and Search Engines",
-    excerpt: "Create compelling, SEO-optimized content that satisfies search intent and drives conversions.",
+    title: "Webflow vs WordPress vs Headless: Which Should You Choose?",
+    excerpt: "Pros and cons for speed, flexibility, cost, and team workflows.",
     content: `
-      <h2>Content Strategy</h2>
+      <h2>Comparison</h2>
       <ul>
-        <li>Search intent analysis: Understand what users really want</li>
-        <li>Content depth: Comprehensive coverage beats thin content</li>
-        <li>Keyword integration: Natural placement throughout content</li>
-        <li>User engagement: Structure for readability and interaction</li>
+        <li>Webflow: speed to market, visual control</li>
+        <li>WordPress: plugins, familiarity, cost-effective</li>
+        <li>Headless: performance, scalability, developer control</li>
       </ul>
-      <p>Balance keyword optimization with valuable, engaging content that keeps users on your site.</p>
     `,
-    author: "Content Strategy",
+    author: "Product Team",
     date: "September 15, 2025",
     readTime: "7 min read",
-    category: "Content SEO",
+    category: "Platforms",
     image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
-    seoTopics: ["content", "on-page"]
+    seoTopics: ["content"]
   },
   {
     id: 5,
-    title: "Link Building That Works: Earn High-Quality Backlinks",
-    excerpt: "Proven strategies to acquire authoritative backlinks that boost your domain authority and rankings.",
+    title: "UX Writing: Microcopy That Increases Conversions",
+    excerpt: "Buttons, form labels, and error states that reduce friction and build trust.",
     content: `
-      <h2>Link Building Tactics</h2>
+      <h2>Patterns</h2>
       <ul>
-        <li>Resource page outreach: Get listed on industry resource pages</li>
-        <li>Broken link building: Replace dead links with your content</li>
-        <li>Guest posting: Contribute to authoritative industry sites</li>
-        <li>Digital PR: Create newsworthy content for media coverage</li>
+        <li>Button labels: action + outcome</li>
+        <li>Forms: clarity, fewer fields, inline errors</li>
+        <li>Empty states: helpful and inviting</li>
       </ul>
-      <p>Focus on quality over quantity. One high-authority link beats dozens of low-quality ones.</p>
     `,
-    author: "Link Building Team",
+    author: "UX Team",
     date: "August 30, 2025",
-    readTime: "9 min read",
-    category: "Link Building",
+    readTime: "5 min read",
+    category: "UX",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80",
-    seoTopics: ["link-building"]
+    seoTopics: ["content"]
   },
   {
     id: 6,
-    title: "SEO Analytics: Track What Matters for Business Growth",
-    excerpt: "Essential metrics and reporting strategies to measure SEO success and demonstrate ROI.",
+    title: "Setup GA4 + Hotjar: Measure What Matters on Your Site",
+    excerpt: "Events, funnels, and heatmaps to see drop-offs and ship smarter iterations.",
     content: `
-      <h2>Key Metrics</h2>
+      <h2>Setup</h2>
       <ul>
-        <li>Organic traffic: Monitor growth and traffic quality</li>
-        <li>Keyword rankings: Track target keyword positions</li>
-        <li>Conversion rates: Measure organic traffic conversions</li>
-        <li>Technical health: Monitor crawl errors and site speed</li>
+        <li>Define events + conversions</li>
+        <li>Connect heatmaps and session replays</li>
+        <li>Use insights for A/B tests</li>
       </ul>
-      <p>Use Google Analytics 4, Search Console, and rank tracking tools for comprehensive reporting.</p>
     `,
     author: "Analytics Team",
     date: "August 12, 2025",
     readTime: "8 min read",
-    category: "SEO Analytics",
+    category: "Analytics",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
     seoTopics: ["analytics"]
   }
@@ -173,7 +163,7 @@ export const Blog = () => {
             Blog & <span className="text-gold">Resources</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            Expert insights, strategies, and guides to improve your search rankings and drive organic traffic growth.
+            Expert insights on design, UX, performance, and conversion to build websites that grow your business.
           </p>
         </motion.div>
 

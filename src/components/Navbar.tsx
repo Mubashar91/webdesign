@@ -79,13 +79,13 @@ export const Navbar = () => {
               }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-foreground font-bold text-base sm:text-lg md:text-lg lg:text-xl">S</span>
+              <span className="text-foreground font-bold text-base sm:text-lg md:text-lg lg:text-xl">L</span>
             </motion.div>
             <motion.span 
               className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-foreground hover:text-gold transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
             >
-              SEO Pro
+              Lux VA Boost
             </motion.span>
           </motion.div>
 

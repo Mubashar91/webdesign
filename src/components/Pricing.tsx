@@ -21,51 +21,49 @@ interface PricingPlan {
 
 const plans: PricingPlan[] = [
   {
-    name: "Essential",
-    hours: "Basic SEO",
+    name: "Starter",
+    hours: "Starter Website",
     price: 997,
     setupFee: 0,
     features: [
-      "SEO Audit & Strategy",
-      "Keyword Research (50 keywords)",
-      "On-Page Optimization (10 pages)",
-      "Technical SEO Fixes",
-      "Monthly Reporting",
-      "Email Support"
+      "Discovery workshop & site map",
+      "Up to 5 pages designed & built",
+      "Responsive layout & accessibility",
+      "Core Web Vitals optimizations",
+      "Basic CMS setup (blog/pages)",
+      "1 round of revisions"
     ],
     highlighted: false
   },
   {
-    name: "Professional",
-    hours: "Complete SEO",
+    name: "Growth",
+    hours: "Growth Website",
     price: 1997,
     setupFee: 0,
     badge: "Most Popular",
     features: [
-      "Everything in Essential",
-      "Content Creation (4 blog posts/month)",
-      "Link Building Campaign",
-      "Local SEO Optimization",
-      "Competitor Analysis",
-      "Bi-weekly Strategy Calls",
-      "Priority Support"
+      "Everything in Starter",
+      "Up to 10 pages + components library",
+      "Conversion-focused layouts (CRO)",
+      "Integrations (forms, GA4, Hotjar)",
+      "Basic animations & interactions",
+      "2 rounds of revisions"
     ],
     highlighted: true
   },
   {
-    name: "Enterprise",
-    hours: "Full-Service SEO",
+    name: "Custom",
+    hours: "Custom Website",
     price: 3997,
     setupFee: 0,
     badge: "Best Value",
     features: [
-      "Everything in Professional",
-      "Advanced Technical SEO",
-      "Content Marketing Strategy",
-      "E-commerce SEO (if applicable)",
-      "Weekly Strategy Calls",
-      "Dedicated Account Manager",
-      "Custom Reporting Dashboard"
+      "Everything in Growth",
+      "Advanced animations & sections",
+      "E‑commerce or custom CMS",
+      "Headless/Next.js or Webflow",
+      "Performance budget & QA suite",
+      "3 rounds of revisions"
     ],
     highlighted: false
   }
@@ -110,13 +108,13 @@ export const Pricing = () => {
             className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-foreground text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-md"
             whileHover={{ scale: 1.05 }}
           >
-            Transparent Pricing
+            Lux VA Boost Plans
           </motion.span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-foreground leading-tight">
-            Simple, <span className="text-gold">Results-Driven</span> Pricing
+            Simple, <span className="text-gold">Growth-Focused</span> Pricing
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Choose the SEO package that fits your business goals. Scale up anytime. No hidden fees.
+            Choose a web design plan built for speed, UX, and conversions. Scale anytime. No hidden fees.
           </p>
         </motion.div>
 
@@ -150,8 +148,8 @@ export const Pricing = () => {
               
               <div className={`relative rounded-2xl p-6 sm:p-8 md:p-10 transition-all duration-500 group h-full ${
                 plan.highlighted 
-                  ? 'bg-gradient-to-br from-[hsl(var(--brand-blue))] via-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] text-foreground shadow-[0_25px_70px_-15px_hsl(var(--brand-blue)/0.5)]' 
-                  : 'bg-card border-2 border-brand/30 hover:border-brand hover:shadow-[0_25px_70px_-15px_hsl(var(--brand-blue)/0.4)]'
+                  ? 'bg-gradient-to-br from-[hsl(var(--brand-blue))] via-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] text-foreground shadow-[0_16px_48px_-12px_hsl(var(--brand-blue)/0.45)]' 
+                  : 'bg-card border-2 border-brand/30 hover:border-brand hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.25)]'
               }`}>
                 {/* Top accent line with animation */}
                 <motion.div 
@@ -197,7 +195,7 @@ export const Pricing = () => {
                     <span className={`px-2 py-0.5 text-xs rounded-full ${
                       plan.highlighted ? 'bg-foreground/20 text-foreground' : 'bg-brand/10 text-brand'
                     }`}>
-                      SEO Package
+                      Web Design Package
                     </span>
                   </div>
                 </div>
@@ -273,11 +271,11 @@ export const Pricing = () => {
                       ? 'bg-foreground text-brand hover:bg-foreground/95 shadow-lg hover:shadow-xl hover:scale-105' 
                       : 'border-2 border-brand text-brand hover:bg-brand hover:text-foreground hover:scale-105'
                   }`}
-                  aria-label={`Get started with ${plan.name} plan - ${plan.hours} per week at €${Math.round(plan.price * (1 - discount) * vaCount)} per month`}
+                  aria-label={`Get started with ${plan.name} – €${plans[index].price}/mo`}
                 >
                   {/* Button shine effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover/btn:translate-x-[200%] transition-transform duration-700" aria-hidden="true" />
-                  <span className="relative">Get Started</span>
+                  <span className="relative">Book Free Consult</span>
                 </Button>
               </div>
             </motion.div>
@@ -291,7 +289,7 @@ export const Pricing = () => {
     viewport={{ once: true }}
     transition={{ duration: 0.6, delay: 0.5 }}
   >
-    All plans are billed monthly with no long-term contracts. Upgrade or downgrade anytime. Results typically seen within 3-6 months.
+    Typical build timeline: 3–6 weeks. Upgrade or scale anytime. No long-term contracts.
         </motion.p>
       </div>
     </motion.section>

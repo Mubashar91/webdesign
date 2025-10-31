@@ -9,28 +9,28 @@ import { HelpCircle, Shield, Zap } from "lucide-react";
 
 const faqs = [
   {
-    question: "How long does it take to see SEO results?",
-    answer: "SEO is a long-term strategy. You'll typically see initial improvements in 3-6 months, with significant results in 6-12 months. We provide monthly reports to track progress and adjust strategies based on performance data."
+    question: "How long does a website project take?",
+    answer: "Typical timelines: Starter 2–3 weeks, Growth 3–5 weeks, Custom 4–8 weeks depending on scope, approvals, and integrations. We share a clear timeline with milestones."
   },
   {
-    question: "Do you guarantee first page rankings?",
-    answer: "While we can't guarantee specific rankings (no ethical SEO agency can), we guarantee measurable improvements in organic traffic, keyword rankings, and search visibility using proven white-hat techniques."
+    question: "What platforms do you build on?",
+    answer: "We build with Webflow or WordPress, and for advanced needs we ship Next.js/Headless. We’ll recommend the best stack for your goals, budget, and team."
   },
   {
-    question: "What's included in your SEO audit?",
-    answer: "Our comprehensive audit covers technical SEO, on-page optimization, content analysis, keyword research, competitor analysis, backlink profile review, and site speed optimization. You'll receive a detailed report with actionable recommendations."
+    question: "Will my site be fast and mobile‑friendly?",
+    answer: "Yes. Every site is responsive, accessible, and optimized for Core Web Vitals. We compress assets, optimize fonts, and test across modern devices and browsers."
   },
   {
-    question: "Do you work with my existing content team?",
-    answer: "Absolutely! We collaborate with your in-house team, providing SEO guidelines, keyword strategies, and content optimization recommendations. We can also create SEO-optimized content if needed."
+    question: "Can I edit content myself?",
+    answer: "Absolutely. We set up a CMS so you can edit pages, blogs, and media easily. We also provide quick Loom tutorials after launch."
   },
   {
-    question: "How do you measure SEO success?",
-    answer: "We track organic traffic growth, keyword rankings, click-through rates, conversion rates, domain authority, and revenue from organic search. Monthly reports show progress toward your specific business goals."
+    question: "Do you handle copy and images?",
+    answer: "We can collaborate on copy (UX writing) and source licensed images/illustrations. You can also provide brand assets and we’ll implement them."
   },
   {
-    question: "Can you help with local SEO?",
-    answer: "Yes! We specialize in local SEO including Google My Business optimization, local citation building, review management, and location-based keyword targeting to help you dominate local search results."
+    question: "What’s included after launch?",
+    answer: "30 days of support for fixes, then optional retainers for CRO experiments, new pages, and ongoing improvements. We’re here long‑term if you need us."
   }
 ];
 
@@ -77,7 +77,7 @@ export const FAQ = () => {
             </h2>
             {/* Description - Centered */}
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed px-2 text-center mx-auto">
-              Everything you need to know about our SEO services. Can't find what you're looking for? Chat with us.
+              Everything you need to know about our web design services. Can't find what you're looking for? Chat with us.
             </p>
           </motion.div>
 
@@ -132,10 +132,10 @@ export const FAQ = () => {
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-bold text-foreground mb-1.5">
-                    White-Hat SEO
+                    Accessible & Fast
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    We use only ethical, Google-approved SEO techniques that protect your site long-term
+                    WCAG-friendly, responsive, and optimized for Core Web Vitals to keep visitors engaged
                   </p>
                 </div>
               </div>
@@ -148,10 +148,10 @@ export const FAQ = () => {
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-bold text-foreground mb-1.5">
-                    Complete SEO Suite
+                    Complete Web Design Suite
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Technical SEO • Content • Keywords • Links • Local SEO • Analytics & more
+                    Strategy • UX/UI • Development • CMS • Integrations • CRO • Analytics
                   </p>
                 </div>
               </div>

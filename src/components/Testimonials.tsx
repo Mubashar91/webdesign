@@ -7,21 +7,21 @@ const testimonials = [
     name: "Emma Rodriguez",
     company: "Luxe Beauty Co.",
     role: "Founder",
-    content: "Our organic traffic increased 400% in 8 months. We went from page 3 to ranking #1 for our main keywords. The ROI from SEO has been incredible.",
+    content: "They redesigned our site and conversions doubled within a month. The new UX feels premium and the site loads in under a second.",
     rating: 5
   },
   {
     name: "David Chen",
     company: "Peak Performance Coaching",
     role: "CEO",
-    content: "Local SEO was a game changer. We now dominate local search and get 15+ qualified leads per week from Google. Best investment we've made.",
+    content: "Our new website looks incredible and feels fast on mobile. Bookings increased 2.3x after launch.",
     rating: 5
   },
   {
     name: "Sophie Martens",
     company: "Urban Eats",
     role: "Marketing Lead",
-    content: "Their technical SEO audit fixed issues we didn't even know existed. Site speed improved 85% and we're ranking for 300+ keywords now.",
+    content: "The team handled design, build, and CMS. We can ship pages in minutes now, and online orders are up 60%.",
     rating: 5
   }
 ];
@@ -45,10 +45,10 @@ export const Testimonials = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-2">
-            Trusted by <span className="text-gold">Brands That Rank</span>
+            Loved by <span className="text-gold">Brands That Convert</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl px-2">
-            Real SEO results from real businesses who partnered with us.
+            Real web design results: better UX, faster load times, and higher conversions.
           </p>
         </motion.div>
 
@@ -93,10 +93,10 @@ export const Testimonials = () => {
               Success Story
             </span>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
-              Case Study: <span className="text-gold">450% Organic Traffic Growth in 6 Months</span>
+              Case Study: <span className="text-gold">2.5x Conversion Lift After Redesign</span>
             </h3>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-5 sm:mb-6 leading-relaxed max-w-3xl">
-              See how an e-commerce store went from 2K to 11K monthly organic visitors and turned SEO into their #1 revenue channel.
+              See how a service brand relaunched with a modern, fast website and turned traffic into customers.
             </p>
             <Button variant="gold" size="lg" className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
               View Full Case Study

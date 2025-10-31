@@ -69,11 +69,11 @@ export const Hero = () => {
             </motion.div>
             
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-5 md:mb-6 leading-[1.15] sm:leading-[1.12] md:leading-[1.1]">
-              Dominate Search Results & <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">Drive Organic Traffic</span>
+              Lux VA Boost: <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">Websites that Convert</span>
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-3 sm:mb-4 md:mb-5 leading-relaxed max-w-xl">
-              Complete SEO solutions: keyword research, on-page optimization, content strategy, and technical SEO — all designed to boost your rankings.
+              Modern web design and development focused on speed, UX, and conversions. From strategy to launch — all tailored to your brand.
             </p>
             
             <motion.div
@@ -87,7 +87,7 @@ export const Hero = () => {
                 size="lg"
                 onClick={() => window.location.href = '/book-meeting'}
                 className="group relative w-full sm:w-auto text-sm sm:text-base md:text-lg px-8 sm:px-10 md:px-12 py-5 sm:py-6 md:py-7 h-auto font-bold shadow-gold-lg transform hover:scale-[1.06] hover:-translate-y-2 transition-all duration-400 hover:brightness-110 cursor-pointer overflow-hidden rounded-xl border-2 border-transparent hover:border-yellow-400/30"
-                aria-label="Book a free 15-minute SEO strategy call"
+                aria-label="Book a free 15-minute design consultation"
               >
                 {/* Subtle shimmer effect */}
                 <motion.div
@@ -110,8 +110,8 @@ export const Hero = () => {
                 
                 <span className="relative z-10 flex items-center justify-center gap-2.5">
                   <Calendar className="w-5 h-5 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" aria-hidden="true" />
-                  <span className="hidden sm:inline font-semibold group-hover:tracking-wide transition-all duration-300">Book Free SEO Audit (15 min)</span>
-                  <span className="sm:hidden font-semibold group-hover:tracking-wide transition-all duration-300">Book SEO Audit</span>
+                  <span className="hidden sm:inline font-semibold group-hover:tracking-wide transition-all duration-300">Book Free Consult</span>
+                  <span className="sm:hidden font-semibold group-hover:tracking-wide transition-all duration-300">Book Free Consult</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" aria-hidden="true" />
                 </span>
               </Button>
