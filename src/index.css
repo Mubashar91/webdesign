@@ -230,7 +230,7 @@ All colors MUST be HSL.
   }
 
   .app-shell {
-    padding-left: var(--side-padding);
-    padding-right: var(--side-padding);
+    /* padding-left: var(--side-padding);
+    padding-right: var(--side-padding); */
   }
 }

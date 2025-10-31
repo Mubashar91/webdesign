@@ -22,11 +22,7 @@ export const Hero = () => {
       className="relative min-h-screen flex items-center bg-background text-foreground overflow-hidden pt-16 sm:pt-20 md:pt-0"
       style={{ opacity }}
     >
-      {/* Animated background */}
-      <motion.div 
-        className="absolute inset-0 bg-gradient-to-br from-background via-background to-[hsl(var(--brand-blue)/0.08)] z-0"
-        style={{ y }}
-      />
+      {/* Background simplified: removed gradient overlay to avoid edge shading */}
       
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-4 py-8 sm:py-12 md:py-16 lg:py-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
@@ -285,35 +281,7 @@ export const Hero = () => {
               }}
               aria-hidden="true"
             />
-            <motion.div 
-              className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-brand/10 rounded-full blur-3xl"
-              animate={{
-                scale: [1, 1.4, 1],
-                opacity: [0.1, 0.3, 0.1]
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 0.5
-              }}
-              aria-hidden="true"
-            />
-            <motion.div 
-              className="absolute top-1/2 -left-4 w-12 h-12 sm:w-16 sm:h-16 bg-yellow-400/10 rounded-full blur-2xl"
-              animate={{
-                x: [-10, 10, -10],
-                scale: [1, 1.2, 1],
-                opacity: [0.1, 0.2, 0.1]
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1
-              }}
-              aria-hidden="true"
-            />
+            {/* Left-side decorative blobs removed to prevent left-edge shading */}
           </motion.div>
         </div>
       </div>
