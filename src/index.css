@@ -158,11 +158,10 @@ All colors MUST be HSL.
     color-scheme: dark;
   }
 
-  /* Global dark mode background gradient */
+  /* Global dark mode background (solid to avoid edge shading) */
   .dark body {
-    background-image: var(--gradient-dark);
+    background-image: none;
     background-color: hsl(var(--background));
-    background-attachment: fixed;
   }
 
   /* Improved scrollbar for dark mode */
